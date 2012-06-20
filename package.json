@@ -1,0 +1,17 @@
+{
+  "author": "Zach Carter",
+  "name": "jsxgettext",
+  "description": "messing around",
+  "version": "0.0.0",
+  "main": "test.js",
+  "dependencies": {
+    "escodegen": "0.0.4",
+    "reflect": "0.1.2",
+    "ejs": "0.7.1"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
