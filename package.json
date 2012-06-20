@@ -3,7 +3,7 @@
   "name": "jsxgettext",
   "description": "messing around",
   "version": "0.0.0",
-  "main": "test.js",
+  "main": "jsxgettext.js",
   "dependencies": {
     "escodegen": "0.0.4",
     "reflect": "0.1.2",
