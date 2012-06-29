@@ -1,15 +1,16 @@
 {
   "author": "Zach Carter",
   "name": "jsxgettext",
-  "description": "messing around",
+  "description": "Extract gettext calls from JavaScript and EJS files",
   "version": "0.0.0",
   "main": "jsxgettext.js",
   "dependencies": {
-    "escodegen": "0.0.4",
-    "reflect": "0.1.2",
-    "ejs": "0.7.1"
+    "escodegen": ">=0.0.4",
+    "reflect": ">=0.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "test": "*"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"

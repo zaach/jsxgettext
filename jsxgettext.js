@@ -1,29 +1,18 @@
 #!/usr/bin/env node
 const fs   = require('fs');
 const path = require('path');
-const ejs  = require('ejs');
 
-const reflect   = require('reflect').Reflect;
-const escodegen = require('escodegen');
+const reflect     = require('reflect').Reflect;
+const escodegen   = require('escodegen');
 
 const generate       = escodegen.generate;
-const attachComments = escodegen.attachComments;
 const traverse       = escodegen.traverse;
 
-const VisitorOption = {
-  Break: 1,
-  Skip: 2
-};
 
+// generate extracted strings file
 function gen (source, filename) {
   var ast       = reflect.parse(source, {comment: true, tokens: true, loc: true});
   var generated = '';
-
-  // not used yet
-  attachComments(ast, ast.comments, ast.tokens);
-  //console.log(ast);
-
-  var comment = makeCommentFn(filename);
 
   traverse(ast, {
     cursor: 0,
@@ -36,43 +25,97 @@ function gen (source, filename) {
       }
       var str = node.arguments[0].raw;
       var line = node.loc.start.line;
+      var comments = findComments(ast.comments, line);
 
-      generated += comment(line) + "\n" +
-                   msgid(str);
+      generated += genComment(filename, line, comments) + "\n" +
+                   msgid(str) + "\n";
     }
   });
+
+  function lineFromRange (range) {
+    return source.slice(0, range[1]).split('\n').length;
+  }
+
+  // finds comments that end on the previous line
+  function findComments (comments, line) {
+    var found = '';
+    comments.forEach(function (node) {
+      var commentLine = lineFromRange(node.range);
+      if ((node.type == 'Line' && commentLine == line) ||
+        (node.type == 'Block' && commentLine + 1 == line)) {
+        found += node.value;
+      }
+    });
+    return found;
+  }
 
   return generated;
 }
 
+// generate extracted strings file from EJS
 function genEJS (ejsSource, filename) {
-  ejsSource || (ejsSource = "<h1>\n\n\n<%= gettext('Last step!')/* blah */ %></h1>");
-  var source = ejs.parse(ejsSource);
-  //console.log(source);
+  ejsSource = ejsSource || "<h1>\n\n\n<%=var a;\n//test\ngettext('Last step!')/* blah */ %></h1>";
+  var source = parseEJS(ejsSource);
 
   return gen(source, filename);
 }
 
-function makeCommentFn(file) {
-  return function comment (line, additional) {
-    return "#: " + file + ":" + line +
-      (additional ? "\n#:" + additional.split("\n").join("\n#:") : '');
-  };
+function genComment (file, line, additional) {
+  return "#: " + file + ":" + line +
+    (additional ? "\n#:" + additional.split("\n").join("\n#:") : '');
 }
 
 function msgid (str) {
   return "msgid " + str + "\n";
 }
 
-exports.gen    = gen;
-exports.genEJS = genEJS;
 
-// demo
-var test     = "var blah;\n/* I10n: This %s will be the user's name */\nvar foo = gettext(\"Hello %s, welcome back\");";
-var filename = process.argv[2];
-var source   = filename ? fs.readFileSync(filename, "utf8") : test;
+// Parsing helpers
+function filtered(js) {
+  return js.substr(1).split('|').reduce(function(js, filter){
+    var parts = filter.split(':'),
+      name = parts.shift(),
+      args = parts.shift() || '';
+    if (args) args = ', ' + args;
+    return 'filters.' + name + '(' + js + args + ')';
+  });
+}
 
-var result = gen(source, filename || "foo.txt");
+// strips everything but the javascript bits
+function parseEJS (str, options){
+  options = options || {};
+  var open = options.open || '<%',
+    close = options.close || '%>';
 
-console.log(result);
+  var buf = [];
+  var lineno = 1;
+
+  for (var i = 0, len = str.length; i < len; ++i) {
+    if (str.slice(i, open.length + i) == open) {
+      i += open.length;
+      switch (str.substr(i, 1)) {
+        case '=':
+        case '-':
+          ++i;
+          break;
+      }
+
+      var end = str.indexOf(close, i), js = str.substring(i, end), start = i, n = 0;
+      if ('-' == js[js.length-1]){
+        js = js.substring(0, js.length - 2);
+      }
+      while (~(n = js.indexOf("\n", n))) n++,buf.push("\n");
+      buf.push(js);
+      i += end - start + close.length - 1;
+
+    } else if (str.substr(i, 1) == "\n") {
+        buf.push("\n");
+    }
+  }
+
+  return buf.join('');
+}
+
+exports.generate        = gen;
+exports.generateFromEJS = genEJS;
 
