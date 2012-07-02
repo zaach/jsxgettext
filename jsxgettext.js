@@ -46,10 +46,10 @@ function gen (source, filename) {
     var found = '';
     comments.forEach(function (node) {
       var commentLine = lineFromRange(node.range);
-      if (node.value.match(/^\s*L10n/) &&
+      if (node.value.match(/^\s*L10n:/) &&
         (commentLine == line ||
          commentLine + 1 == line)) {
-        found += node.value;
+        found += node.value.replace(/^\s*L10n:/, '');
       }
     });
     return found;
