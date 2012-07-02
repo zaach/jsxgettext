@@ -2,7 +2,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const reflect     = require('reflect').Reflect;
+const parser     = require('esprima');
 const escodegen   = require('escodegen');
 
 const generate       = escodegen.generate;
@@ -11,7 +11,7 @@ const traverse       = escodegen.traverse;
 
 // generate extracted strings file
 function gen (source, filename) {
-  var ast       = reflect.parse(source, {comment: true, tokens: true, loc: true});
+  var ast       = parser.parse(source, {comment: true, tokens: true, loc: true});
   var generated = '';
 
   traverse(ast, {
@@ -23,7 +23,7 @@ function gen (source, filename) {
           ) {
         return;
       }
-      var str = node.arguments[0].raw;
+      var str = JSON.stringify(node.arguments[0].value);
       var line = node.loc.start.line;
       var comments = findComments(ast.comments, line);
 
@@ -41,8 +41,9 @@ function gen (source, filename) {
     var found = '';
     comments.forEach(function (node) {
       var commentLine = lineFromRange(node.range);
-      if ((node.type == 'Line' && commentLine == line) ||
-        (node.type == 'Block' && commentLine + 1 == line)) {
+      if (node.value.match(/^\s*L10n/) &&
+        (commentLine == line ||
+         commentLine + 1 == line)) {
         found += node.value;
       }
     });

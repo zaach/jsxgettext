@@ -6,7 +6,7 @@
   "main": "jsxgettext.js",
   "dependencies": {
     "escodegen": ">=0.0.4",
-    "reflect": ">=0.1.2"
+    "esprima": ">=0.9.9"
   },
   "devDependencies": {
     "test": "*"
