@@ -60,7 +60,6 @@ function gen (source, filename) {
 
 // generate extracted strings file from EJS
 function genEJS (ejsSource, filename) {
-  ejsSource = ejsSource || "<h1>\n\n\n<%=var a;\n//test\ngettext('Last step!')/* blah */ %></h1>";
   var source = parseEJS(ejsSource);
 
   return gen(source, filename);
