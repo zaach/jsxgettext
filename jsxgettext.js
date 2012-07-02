@@ -7,11 +7,11 @@
 const fs   = require('fs');
 const path = require('path');
 
-const parser     = require('esprima');
-const escodegen   = require('escodegen');
+const parser    = require('esprima');
+const escodegen = require('escodegen');
 
-const generate       = escodegen.generate;
-const traverse       = escodegen.traverse;
+const generate = escodegen.generate;
+const traverse = escodegen.traverse;
 
 
 // generate extracted strings file
@@ -72,18 +72,6 @@ function genComment (file, line, additional) {
 
 function msgid (str) {
   return "msgid " + str + "\n";
-}
-
-
-// Parsing helpers
-function filtered(js) {
-  return js.substr(1).split('|').reduce(function(js, filter){
-    var parts = filter.split(':'),
-      name = parts.shift(),
-      args = parts.shift() || '';
-    if (args) args = ', ' + args;
-    return 'filters.' + name + '(' + js + args + ')';
-  });
 }
 
 // strips everything but the javascript bits
