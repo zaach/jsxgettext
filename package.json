@@ -3,8 +3,8 @@
   "name": "jsxgettext",
   "description": "Extract gettext calls from JavaScript and EJS files",
   "version": "0.0.0",
-  "main": "jsxgettext.js",
-  "bin": "cli.js",
+  "main": "lib/jsxgettext.js",
+  "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
     "escodegen": ">=0.0.4",
