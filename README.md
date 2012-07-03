@@ -5,9 +5,10 @@ A node module with a CLI that extracts gettext strings from JavaScript and EJS f
 
 Install:
 
-  git clone https://github.com/zaach/jsxgettext.git
-  cd jsxgettext
-  npm link
+    git clone https://github.com/zaach/jsxgettext.git
+    cd jsxgettext
+    npm link
 
 Use:
-  jsxgettext wait-messages.js
+
+    jsxgettext wait-messages.js
