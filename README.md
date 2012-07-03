@@ -11,4 +11,14 @@ Install:
 
 Use:
 
-    jsxgettext wait-messages.js
+    Usage: jsxgettext <input> [options]
+
+    input     input file
+
+    Options:
+       -o FILE, --output FILE     write output to specified file
+       -p DIR, --output-dir DIR   output files will be placed in directory DIR
+       -v, --version              print version and exit
+       -k WORD, --keyword WORD    additional keyword to be looked for
+       -j, --join-existing        join messages with existing file (TODO)
+       -L NAME, --language NAME   recognise the specified language (JS, EJS)
