@@ -24,6 +24,6 @@ A node module with a CLI that extracts gettext strings from JavaScript and EJS f
        -p DIR, --output-dir DIR   output files will be placed in directory DIR
        -v, --version              print version and exit
        -k WORD, --keyword WORD    additional keyword to be looked for
-       -j, --join-existing        join messages with existing file (TODO)
+       -j, --join-existing        join messages with existing file
        -L NAME, --language NAME   recognise the specified language (JS, EJS)
 
