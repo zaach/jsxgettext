@@ -3,17 +3,21 @@
 
 A node module with a CLI that extracts gettext strings from JavaScript and EJS files. It also extracts comments that begin with "L10n:" when they appear above a `gettext` call.
 
-Install:
+## Install
 
     git clone https://github.com/zaach/jsxgettext.git
     cd jsxgettext
     npm link
 
-Use:
+## Use
 
-    Usage: jsxgettext <input> [options]
+    $ jsxgettext
 
-    input     input file
+    input argument is required
+
+    Usage: jsxgettext <input>... [options]
+
+    input     input files
 
     Options:
        -o FILE, --output FILE     write output to specified file
@@ -22,3 +26,4 @@ Use:
        -k WORD, --keyword WORD    additional keyword to be looked for
        -j, --join-existing        join messages with existing file (TODO)
        -L NAME, --language NAME   recognise the specified language (JS, EJS)
+
