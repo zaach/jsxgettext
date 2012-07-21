@@ -17,5 +17,8 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
+  },
+  "scripts": {
+    "test": "node tests/all.js"
   }
 }
