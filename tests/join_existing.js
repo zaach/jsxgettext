@@ -17,7 +17,7 @@ exports['we gettext from first file'] = function (assert, cb) {
   // We'll extract strings from inputs/first.js
   // This should match outputs/messages_firstpass.js
   var inputFilename = path.join(__dirname, 'inputs', 'first.js');
-  fs.readFile(inputFilename, function (err, source) {
+  fs.readFile(inputFilename, 'utf8', function (err, source) {
     var opts = {},
         sources = {'inputs/first.js': source},
         result = jsxgettext.generate(sources, 'inputs/first.js', opts);
@@ -60,7 +60,7 @@ var test2 = function (assert, cb) {
   // We'll extract strings from inputs/second.js
   // This should match outputs/messages.js
   var inputFilename = path.join(__dirname, 'inputs', 'second.js');
-  fs.readFile(inputFilename, function (err, source) {
+  fs.readFile(inputFilename, 'utf8', function (err, source) {
     var opts = {"join-existing": true},
         sources = {'inputs/first.js': sourceFirstPass,
 		   'inputs/second.js': source},
