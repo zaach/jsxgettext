@@ -88,8 +88,8 @@ var test2 = function (assert, cb) {
                  actual.length - 1 == example.length),
                 'Actual and Expected are the same length');
       fs.writeFileSync('messages2.pot', result, "utf8");
+      cb();
     });
-    cb();
   });
 };
 
