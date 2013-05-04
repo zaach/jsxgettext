@@ -10,6 +10,7 @@ exports['test second attribute'] = function (assert, cb) {
     var opts = {},
         sources = {'inputs/second_attribute.ejs': source},
         result = jsxgettext.generateFromEJS(sources, 'inputs/second_attribute.ejs', opts);
+
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 1, 'result is not empty');
     cb();
