@@ -2,7 +2,7 @@
   "author": "Zach Carter",
   "name": "jsxgettext",
   "description": "Extract gettext calls from JavaScript and EJS files",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/jsxgettext.js",
   "bin": "lib/cli.js",
   "preferGlobal": true,
