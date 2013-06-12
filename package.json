@@ -3,6 +3,10 @@
   "name": "jsxgettext",
   "description": "Extract gettext calls from JavaScript and EJS files",
   "version": "0.0.6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zaach/jsxgettext.git"
+  },
   "main": "lib/jsxgettext.js",
   "bin": "lib/cli.js",
   "preferGlobal": true,
