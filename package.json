@@ -11,9 +11,9 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "escodegen": "0.0.4",
-    "esprima": "0.9.9",
-    "estraverse": "1.1.1",
+    "escodegen": "0.0.23",
+    "esprima": "1.0.3",
+    "estraverse": "1.1.2",
     "nomnom": "1.5.2",
     "jade": "0.30.0"
   },
