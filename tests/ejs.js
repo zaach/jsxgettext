@@ -10,10 +10,10 @@ exports['test ejs'] = function (assert, cb) {
     var opts = {},
         sources = {'inputs/include.ejs': source},
         result = jsxgettext.generateFromEJS(sources, 'inputs/include.js', opts);
-    console.log('source', source);
-    console.log('result', result);
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 1, 'result is not empty');
+    assert.ok(result.indexOf('this is a localizable string') !== -1,
+              'localizable strings are extracted');
     cb();
   });
 };
