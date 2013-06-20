@@ -7,6 +7,7 @@ exports.testAll['test join_existing'] = require('./join_existing')['we gettext f
 exports.testAll['test leading_hash'] = require('./leading_hash')['leading hash'];
 exports.testAll['test second_attribute'] = require('./second_attribute')['test second attribute'];
 exports.testAll['test jade'] = require('./jade');
+exports.testAll['test ejs'] = require('./ejs');
 exports.testAll['test comments'] = require('./test_comment');
 
 if (module == require.main) {
