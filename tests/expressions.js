@@ -23,5 +23,17 @@ exports['test different expression contexts for gettext'] = function (assert, cb
   });
 };
 
+exports['test issue #25'] = function (assert, cb) {
+  // check that files with leading hash parse
+  var inputFilename = path.join(__dirname, 'inputs', 'pizza.js');
+  fs.readFile(inputFilename, "utf8", function (err, source) {
+    var opts = {},
+        sources = {'inputs/pizza.js': source},
+        result = jsxgettext.generate(sources, 'inputs/pizza.js', opts);
+    assert.equal(typeof result, 'string', 'result is a string');
+    assert.ok(result.length > 0, 'result is not empty');
+  });
+};
+
 
 if (module == require.main) require('test').run(exports);
