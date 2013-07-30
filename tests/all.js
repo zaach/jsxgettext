@@ -9,7 +9,8 @@ exports.testAll['test second_attribute'] = require('./second_attribute')['test s
 exports.testAll['test jade'] = require('./jade');
 exports.testAll['test ejs'] = require('./ejs');
 exports.testAll['test comments'] = require('./test_comment');
-exports.testAll['test expressiosn'] = require('./expressions');
+exports.testAll['test po_quotes'] = require("./po_quotes");
+exports.testAll['test expressions'] = require('./expressions');
 
 if (module == require.main) {
   require('test').run(exports);
