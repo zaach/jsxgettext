@@ -3,16 +3,17 @@ fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
 path = require('path');
 
-exports['test second attribute'] = function (assert, cb) {
+// Tests parsing files with comments
+
+exports['test comments'] = function (assert, cb) {
   // check that files with leading hash parse
-  var inputFilename = path.join(__dirname, 'inputs', 'second_attribute.ejs');
+  var inputFilename = path.join(__dirname, 'inputs', 'test.js');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     var opts = {},
-        sources = {'inputs/second_attribute.ejs': source},
-        result = jsxgettext.generateFromEJS(sources, 'inputs/second_attribute.ejs', opts);
-
+        sources = {'inputs/test.js': source},
+        result = jsxgettext.generate(sources, 'inputs/test.js', opts);
     assert.equal(typeof result, 'string', 'result is a string');
-    assert.ok(result.length > 1, 'result is not empty');
+    assert.ok(result.length > 0, 'result is not empty');
     cb();
   });
 };
