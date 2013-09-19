@@ -32,8 +32,8 @@ exports['test issue #25'] = function (assert, cb) {
         result = jsxgettext.generate(sources, 'inputs/pizza.js', opts);
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 0, 'result is not empty');
+    cb();
   });
 };
-
 
 if (module == require.main) require('test').run(exports);
