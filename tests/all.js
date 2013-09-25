@@ -3,6 +3,7 @@
 // doesn't work
 
 exports.testAll = {};
+exports.testAll['test creation date'] = require('./creation_date');
 exports.testAll['test join_existing'] = require('./join_existing')['we gettext from first file'];
 exports.testAll['test leading_hash'] = require('./leading_hash')['leading hash'];
 exports.testAll['test second_attribute'] = require('./second_attribute')['test second attribute'];

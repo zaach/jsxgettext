@@ -1,6 +1,7 @@
 var
 fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
+utils = require('./utils'),
 path = require('path');
 
 exports['test different expression contexts for gettext'] = function (assert, cb) {
@@ -13,13 +14,9 @@ exports['test different expression contexts for gettext'] = function (assert, cb
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 0, 'result is not empty');
 
-    var outputFilename = path.join(__dirname, 'outputs',
-                                  'expressions.po');
+    var outputFilename = path.join(__dirname, 'outputs', 'expressions.pot');
 
-    fs.readFile(outputFilename, function (err, source) {
-      assert.equal(result, source.toString('utf8'), 'results match');
-      cb();
-    });
+    utils.compareResultWithFile(result, outputFilename, assert, cb);
   });
 };
 

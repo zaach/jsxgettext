@@ -1,6 +1,7 @@
 var
 fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
+utils = require('./utils'),
 path = require('path');
 
 // Tests the --join-existing feature
@@ -21,38 +22,19 @@ exports['we gettext from first file'] = function (assert, cb) {
     var opts = {},
         sources = {'inputs/first.js': source},
         result = jsxgettext.generate(sources, 'inputs/first.js', opts);
-    assert.equal(typeof result, 'string');
-    assert.ok(result.length > 0);
-    var outputFilename = path.join(__dirname, 'outputs',
-				   'messages_firstpass.pot');
-    fs.readFile(outputFilename, function (err, source) {
-      assert.ok(! err);
+    assert.equal(typeof result, 'string', 'Result should be a string');
+    assert.ok(result.length > 0, 'Result should not be empty');
+    var outputFilename = path.join(__dirname, 'outputs', 'messages_firstpass.pot');
 
-      var example = source.toString('utf8').split('\n');
-      var actual = result.split('\n');
+    utils.compareResultWithFile(result, outputFilename, assert, function () {
+      sourceFirstPass = source;
 
-      for (var i=0; i < example.length; i++) {
-        // Dynamic lines
-        if (0 === example[i].indexOf('"POT-Creation-Date')) continue;
-
-        // Reproducable lines
-        assert.ok(i < actual.length,
-		  'Num example output is at least as long as our result');
-        assert.equal(actual[i], example[i], 'We match line for line');
-      }
-      assert.ok((actual.length == example.length ||
-           actual.length - 1 == example.length),
-          'Actual and Expected are the same length');
+      // write to filesystem as join-existing will implicitly look for it, but...
+      // TODO: So jsxgettext does the right thing with or without messages.po
+      // that seems odd...
+      fs.writeFileSync('messages.pot', result, "utf8");
+      test2(assert, cb);
     });
-
-    sourceFirstPass = source;
-
-    // write to filesystem as join-existing will implicitly look for it, but...
-    // TODO: So jsxgettext does the right thing with or without messages.po
-    // that seems odd...
-    fs.writeFileSync('messages.pot', result, "utf8");
-    //cb();
-    test2(assert, cb);
   });
 };
 
@@ -63,32 +45,15 @@ var test2 = function (assert, cb) {
   fs.readFile(inputFilename, 'utf8', function (err, source) {
     var opts = {"join-existing": true},
         sources = {'inputs/first.js': sourceFirstPass,
-		   'inputs/second.js': source},
+       'inputs/second.js': source},
         result = jsxgettext.generate(sources, 'inputs/second.js', opts);
 
-    assert.equal(typeof result, 'string');
-    assert.ok(result.length > 0);
-    var outputFilename = path.join(__dirname, 'outputs',
-				   'messages_secondpass.pot');
-    fs.readFile(outputFilename, function (err, source) {
-      assert.ok(! err);
+    assert.equal(typeof result, 'string', 'Result should be a string');
+    assert.ok(result.length > 0, 'Result should not be empty');
+    var outputFilename = path.join(__dirname, 'outputs', 'messages_secondpass.pot');
 
-      var example = source.toString('utf8').split('\n');
-      var actual = result.split('\n');
-
-      for (var i=0; i < example.length; i++) {
-        // Dynamic lines
-        if (0 === example[i].indexOf('"POT-Creation-Date')) continue;
-        // Reproducable lines
-        assert.ok(i < actual.length,
-		  'Num example output is at least as long as our result');
-        assert.equal(actual[i], example[i], 'We match line for line');
-      }
-      assert.ok((actual.length == example.length ||
-                 actual.length - 1 == example.length),
-                'Actual and Expected are the same length');
-      fs.writeFileSync('messages2.pot', result, "utf8");
-      cb();
+    utils.compareResultWithFile(result, outputFilename, assert, function () {
+      fs.unlink('messages.pot', cb);  // cleanup
     });
   });
 };
