@@ -12,6 +12,7 @@ exports.testAll['test comments'] = require('./test_comment');
 exports.testAll['test po_quotes'] = require("./po_quotes");
 exports.testAll['test expressions'] = require('./expressions');
 exports.testAll['test anonymous_functions'] = require('./anonymous_functions');
+exports.testAll['test sorting'] = require('./sorting');
 
 if (module == require.main) {
   require('test').run(exports);
