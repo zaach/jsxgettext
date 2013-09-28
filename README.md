@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/BYK/jsxgettext.png)](https://travis-ci.org/BYK/jsxgettext)
+[![Build Status](https://travis-ci.org/zaach/jsxgettext.png)](https://travis-ci.org/zaach/jsxgettext)
 
 # jsxgettext
 
