@@ -1,6 +1,7 @@
 var
 fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
+utils = require('./utils'),
 path = require('path');
 
 exports['test results should be alphabetically sorted when sort is true'] = function (assert, cb) {
@@ -13,12 +14,9 @@ exports['test results should be alphabetically sorted when sort is true'] = func
     assert.ok(result.length > 0, 'result is not empty');
 
     var outputFilename = path.join(__dirname, 'outputs',
-                                  'sorted.po');
+                                  'sorted.pot');
 
-    fs.readFile(outputFilename, function (err, source) {
-      assert.equal(result, source.toString('utf8'), 'results match');
-      cb();
-    });
+    utils.compareResultWithFile(result, outputFilename, assert, cb);
   });
 };
 
