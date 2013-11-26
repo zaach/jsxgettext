@@ -32,6 +32,5 @@ Or from source:
        -k WORD, --keyword WORD    additional keyword to be looked for
        -j, --join-existing        join messages with existing file
        -L NAME, --language NAME   recognise the specified language (JavaScript, EJS, Jinja)
-       -s, --sort                 Sort the extracted strings alphabetically when generating the pot file
 
 
