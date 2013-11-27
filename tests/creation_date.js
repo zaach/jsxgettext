@@ -1,4 +1,4 @@
-const
+var
   jsxgettext = require('../lib/jsxgettext'),
   gettextParser = require('gettext-parser');
 
