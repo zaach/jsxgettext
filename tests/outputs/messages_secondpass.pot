@@ -2,7 +2,7 @@
 msgid "Hello World"
 msgstr ""
 
-#: inputs/first.js:2 inputs/second.js:1
+#: inputs/first.js:2
+#: inputs/second.js:1
 msgid "This message is used twice."
 msgstr ""
-

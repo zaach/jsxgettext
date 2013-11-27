@@ -1,8 +1,8 @@
-var
-fs = require('fs'),
-jsxgettext = require('../lib/jsxgettext'),
-utils = require('./utils'),
-path = require('path');
+const
+  fs = require('fs'),
+  jsxgettext = require('../lib/jsxgettext'),
+  utils = require('./utils'),
+  path = require('path');
 
 // Tests the --join-existing feature
 

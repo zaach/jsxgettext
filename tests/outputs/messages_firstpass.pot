@@ -5,4 +5,3 @@ msgstr ""
 #: inputs/first.js:2
 msgid "This message is used twice."
 msgstr ""
-
