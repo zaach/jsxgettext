@@ -9,6 +9,7 @@ exports.testAll['test leading_hash'] = require('./leading_hash')['leading hash']
 exports.testAll['test second_attribute'] = require('./second_attribute')['test second attribute'];
 exports.testAll['test jade'] = require('./jade');
 exports.testAll['test ejs'] = require('./ejs');
+exports.testAll['test handlebars'] = require('./handlebars');
 exports.testAll['test comments'] = require('./test_comment');
 exports.testAll['test po_quotes'] = require("./po_quotes");
 exports.testAll['test expressions'] = require('./expressions');

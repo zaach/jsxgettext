@@ -1,0 +1,12 @@
+Some {{ gettext "translated text"}} is matched.
+But non-translated text is not matched.
+Even with a {{ value }} embedded.
+Or if it contains the word gettext or even the _ character.
+You might also use a {{#gettext}}block helper{{/gettext}} like this.
+As long as it is {{#helper}}named properly{{/helper}} of course.
+{{! comment strings }} are passed through
+{{!-- including long-form {} comments with }} markup in them --}}
+Things that {{dont}} {{ pattern match a gettext call}} are ignored.
+And spurious { or }} or whatever markup doesn't confuse the parser.
+Escaped quotes are ok, {{gettext 'so let\'s test'}} them.
+So, do we {{gettext good}}?
