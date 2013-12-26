@@ -14,7 +14,7 @@
     "escodegen": "0.0.23",
     "esprima": "1.0.3",
     "estraverse": "1.1.2-1",
-    "gettext-parser": "0.1.8",
+    "gettext-parser": "0.1.10",
     "nomnom": "1.5.2",
     "jade": "0.30.0"
   },
