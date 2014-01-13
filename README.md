@@ -1,7 +1,4 @@
-[![Build Status](https://travis-ci.org/zaach/jsxgettext.png)](https://travis-ci.org/zaach/jsxgettext)
-[![NPM version](https://badge.fury.io/js/jsxgettext.png)](http://badge.fury.io/js/jsxgettext)
-
-# jsxgettext
+# jsxgettext [![Build Status](https://travis-ci.org/zaach/jsxgettext.png)](https://travis-ci.org/zaach/jsxgettext) [![NPM version](https://badge.fury.io/js/jsxgettext.png)](http://badge.fury.io/js/jsxgettext)
 
 A node module with a CLI that extracts gettext strings from JavaScript and EJS files. It also extracts comments that begin with "L10n:" when they appear above a `gettext` call.
 
