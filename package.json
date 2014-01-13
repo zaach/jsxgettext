@@ -11,7 +11,7 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "esprima": "1.0.3",
+    "acorn": "0.4.2",
     "estraverse": "1.1.2-1",
     "gettext-parser": "0.1.10",
     "nomnom": "1.5.2",
