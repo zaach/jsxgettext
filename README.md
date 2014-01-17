@@ -1,6 +1,20 @@
 # jsxgettext [![Build Status](https://travis-ci.org/zaach/jsxgettext.png)](https://travis-ci.org/zaach/jsxgettext) [![NPM version](https://badge.fury.io/js/jsxgettext.png)](http://badge.fury.io/js/jsxgettext)
 
-A node module with a CLI that extracts gettext strings from JavaScript and EJS files. It also extracts comments that begin with "L10n:" when they appear above a `gettext` call.
+A node module with a CLI that extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files. Uses a real parser, [acorn](https://github.com/marijnh/acorn), for JavaScript files and recognizes the following uses:
+
+```javascript
+gettext("Hello world!");
+gettext("Hello" + ' world!');
+myModule.gettext("Hello " + 'world!');
+gettext.call(myObj, "Hello " + 'world!');
+```
+
+It also extracts comments that begin with "L10n:" when they appear above a `gettext` call:
+
+```javascript
+// L10n: Salutation to the world
+gettext("Hello world!");
+```
 
 ## Install
 
