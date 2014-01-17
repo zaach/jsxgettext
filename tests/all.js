@@ -15,7 +15,7 @@ exports.testAll['test po_quotes'] = require("./po_quotes");
 exports.testAll['test expressions'] = require('./expressions');
 exports.testAll['test anonymous_functions'] = require('./anonymous_functions');
 
-if (module == require.main) {
+if (module === require.main) {
   require('test').run(exports);
 } else {
   console.log("Just a module");

@@ -1,3 +1,5 @@
+"use strict";
+
 var
 fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
@@ -17,5 +19,4 @@ exports['test second attribute'] = function (assert, cb) {
   });
 };
 
-
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);

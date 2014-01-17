@@ -1,3 +1,5 @@
+"use strict";
+
 var
   jsxgettext = require('../lib/jsxgettext'),
   gettextParser = require('gettext-parser');
@@ -17,4 +19,4 @@ exports['test creation date'] = function (assert, cb) {
 };
 
 
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);

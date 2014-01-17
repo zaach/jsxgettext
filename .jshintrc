@@ -1,0 +1,23 @@
+{
+    "node": true,
+    "strict": true,
+
+    "undef": true,
+    "unused": true,
+    "eqnull": true,
+    "white": true,
+    "eqeqeq": true,
+    "bitwise": true,
+    "indent": 2,
+    "newcap": true,
+    "trailing": true,
+    "immed": true,
+    "freeze": true,
+    "latedef": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+
+    "-W092": true,
+    "-W107": true
+}

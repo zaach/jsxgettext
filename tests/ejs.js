@@ -1,3 +1,5 @@
+"use strict";
+
 var fs = require('fs');
 var jsxgettext = require('../lib/jsxgettext');
 var path = require('path');
@@ -19,4 +21,4 @@ exports['test ejs'] = function (assert, cb) {
 };
 
 
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);

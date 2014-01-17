@@ -1,3 +1,5 @@
+"use strict";
+
 var fs = require('fs');
 var jsxgettext = require('../lib/jsxgettext');
 var path = require('path');
@@ -21,20 +23,21 @@ exports['test parsing'] = function (assert, cb) {
     cb();
   });
 };
-exports['test regexp escaping'] = function(assert, cb) {
+
+exports['test regexp escaping'] = function (assert, cb) {
   // check that files with leading hash parse
   var inputFilename = path.join(__dirname, 'inputs', 'second_attribute.jade');
   fs.readFile(inputFilename, "utf8", function (err, source) {
+    // if keyword is not escaped, this will throw an exception
+    var opts = {keyword: 'foo)bar'},
+        sources = {'inputs/second_attribute.jade': source};
 
-      // if keyword is not escaped, this will throw an exception
-      var opts = {keyword: 'foo)bar'},
-          sources = {'inputs/second_attribute.jade': source},
-          result = jsxgettext.generateFromJade(sources, opts);
-      // ..and won't reach to here.
-      assert.ok(true, 'regexp should not throw');
-      cb();
+    jsxgettext.generateFromJade(sources, opts);
+    // ..and won't reach to here.
+    assert.ok(true, 'regexp should not throw');
+    cb();
   });
 };
 
 
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);

@@ -1,3 +1,5 @@
+"use strict";
+
 var fs = require('fs');
 
 exports.compareResultWithFile = function (result, filePath, assert, cb, msg) {

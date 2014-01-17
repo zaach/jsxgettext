@@ -1,4 +1,6 @@
-const
+"use strict";
+
+var
   fs = require('fs'),
   jsxgettext = require('../lib/jsxgettext'),
   utils = require('./utils'),
@@ -13,6 +15,26 @@ const
  */
 
 var sourceFirstPass;
+
+var test2 = function (assert, cb) {
+  // We'll extract strings from inputs/second.js
+  // This should match outputs/messages.js
+  var inputFilename = path.join(__dirname, 'inputs', 'second.js');
+  fs.readFile(inputFilename, 'utf8', function (err, source) {
+    var opts = {"join-existing": true},
+        sources = {'inputs/first.js': sourceFirstPass,
+       'inputs/second.js': source},
+        result = jsxgettext.generate(sources, 'inputs/second.js', opts);
+
+    assert.equal(typeof result, 'string', 'Result should be a string');
+    assert.ok(result.length > 0, 'Result should not be empty');
+    var outputFilename = path.join(__dirname, 'outputs', 'messages_secondpass.pot');
+
+    utils.compareResultWithFile(result, outputFilename, assert, function () {
+      fs.unlink('messages.pot', cb);  // cleanup
+    });
+  });
+};
 
 exports['we gettext from first file'] = function (assert, cb) {
   // We'll extract strings from inputs/first.js
@@ -38,24 +60,4 @@ exports['we gettext from first file'] = function (assert, cb) {
   });
 };
 
-var test2 = function (assert, cb) {
-  // We'll extract strings from inputs/second.js
-  // This should match outputs/messages.js
-  var inputFilename = path.join(__dirname, 'inputs', 'second.js');
-  fs.readFile(inputFilename, 'utf8', function (err, source) {
-    var opts = {"join-existing": true},
-        sources = {'inputs/first.js': sourceFirstPass,
-       'inputs/second.js': source},
-        result = jsxgettext.generate(sources, 'inputs/second.js', opts);
-
-    assert.equal(typeof result, 'string', 'Result should be a string');
-    assert.ok(result.length > 0, 'Result should not be empty');
-    var outputFilename = path.join(__dirname, 'outputs', 'messages_secondpass.pot');
-
-    utils.compareResultWithFile(result, outputFilename, assert, function () {
-      fs.unlink('messages.pot', cb);  // cleanup
-    });
-  });
-};
-
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);

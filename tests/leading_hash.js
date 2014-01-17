@@ -1,3 +1,5 @@
+"use strict";
+
 var
 fs = require('fs'),
 jsxgettext = require('../lib/jsxgettext'),
@@ -19,4 +21,4 @@ exports['leading hash'] = function (assert, cb) {
 };
 
 
-if (module == require.main) require('test').run(exports);
+if (module === require.main) require('test').run(exports);
