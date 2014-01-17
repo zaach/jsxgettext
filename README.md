@@ -42,6 +42,4 @@ Or from source:
        -v, --version              print version and exit
        -k WORD, --keyword WORD    additional keyword to be looked for
        -j, --join-existing        join messages with existing file
-       -L NAME, --language NAME   recognise the specified language (JavaScript, EJS, Jinja)
-
-
+       -L NAME, --language NAME   recognise the specified language (JavaScript, EJS, Jinja, Jade, Handlebars)
