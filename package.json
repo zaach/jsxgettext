@@ -18,6 +18,7 @@
     "jade": "0.30.0"
   },
   "devDependencies": {
+    "jshint": "~2.4.1",
     "test": "*"
   },
   "optionalDependencies": {},
@@ -25,6 +26,6 @@
     "node": "*"
   },
   "scripts": {
-    "test": "node test"
+    "test": "node ./node_modules/jshint . && node test"
   }
 }
