@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var jsxgettext = require('../lib/jsxgettext');
+var jade = require('../lib/parsers/jade').jade;
 var path = require('path');
 
 exports['test parsing'] = function (assert, cb) {
@@ -11,7 +12,7 @@ exports['test parsing'] = function (assert, cb) {
 
     var opts = {keyword: '_'},
         sources = {'inputs/second_attribute.jade': source},
-        result = jsxgettext.generateFromJade(sources, opts);
+        result = jsxgettext.generate.apply(jsxgettext, jade(sources, opts));
 
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 1, 'result is not empty');
@@ -32,12 +33,11 @@ exports['test regexp escaping'] = function (assert, cb) {
     var opts = {keyword: 'foo)bar'},
         sources = {'inputs/second_attribute.jade': source};
 
-    jsxgettext.generateFromJade(sources, opts);
+    jsxgettext.generate.apply(jsxgettext, jade(sources, opts));
     // ..and won't reach to here.
     assert.ok(true, 'regexp should not throw');
     cb();
   });
 };
-
 
 if (module === require.main) require('test').run(exports);
