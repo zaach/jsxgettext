@@ -25,6 +25,6 @@
     "node": "*"
   },
   "scripts": {
-    "test": "node tests/all.js"
+    "test": "node test"
   }
 }

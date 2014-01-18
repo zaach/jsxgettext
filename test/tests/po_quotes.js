@@ -1,19 +1,16 @@
 "use strict";
 
-var
-fs = require('fs'),
-jsxgettext = require('../lib/jsxgettext'),
-path = require('path');
+var fs = require('fs');
+var path = require('path');
+
+var jsxgettext = require('../../lib/jsxgettext');
 
 // Tests parsing files with comments
-
 exports['test quotes and newlines when folding msgid'] = function (assert, cb) {
   // check that files with leading hash parse
-  var inputFilename = path.join(__dirname, 'inputs', 'po_quotes.js');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'po_quotes.js');
   fs.readFile(inputFilename, "utf8", function (err, source) {
-    var opts = {},
-        sources = {'inputs/po_quotes.js': source},
-        result = jsxgettext.generate(sources, 'inputs/po_quotes.js', opts);
+    var result = jsxgettext.generate({'inputs/po_quotes.js': source}, {});
 
     // short line is escaped properly
     assert.ok(result.indexOf('\nmsgid "Hello \\"World\\"\\n"\n') >= 0, 'short line');

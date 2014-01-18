@@ -1,13 +1,14 @@
 "use strict";
 
 var fs = require('fs');
-var jsxgettext = require('../lib/jsxgettext');
-var jade = require('../lib/parsers/jade').jade;
 var path = require('path');
+
+var jsxgettext = require('../../lib/jsxgettext');
+var jade = require('../../lib/parsers/jade').jade;
 
 exports['test parsing'] = function (assert, cb) {
   // check that files with leading hash parse
-  var inputFilename = path.join(__dirname, 'inputs', 'second_attribute.jade');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'second_attribute.jade');
   fs.readFile(inputFilename, "utf8", function (err, source) {
 
     var opts = {keyword: '_'},
@@ -27,7 +28,7 @@ exports['test parsing'] = function (assert, cb) {
 
 exports['test regexp escaping'] = function (assert, cb) {
   // check that files with leading hash parse
-  var inputFilename = path.join(__dirname, 'inputs', 'second_attribute.jade');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'second_attribute.jade');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     // if keyword is not escaped, this will throw an exception
     var opts = {keyword: 'foo)bar'},

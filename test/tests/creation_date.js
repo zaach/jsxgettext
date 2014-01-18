@@ -1,8 +1,7 @@
 "use strict";
 
-var
-  jsxgettext = require('../lib/jsxgettext'),
-  gettextParser = require('gettext-parser');
+var jsxgettext = require('../../lib/jsxgettext');
+var gettextParser = require('gettext-parser');
 
 exports['test creation date'] = function (assert, cb) {
   var opts = {},
@@ -17,6 +16,5 @@ exports['test creation date'] = function (assert, cb) {
 
   cb();
 };
-
 
 if (module === require.main) require('test').run(exports);

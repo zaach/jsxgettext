@@ -1,12 +1,13 @@
 "use strict";
 
 var fs = require('fs');
-var jsxgettext = require('../lib/jsxgettext');
-var handlebars = require('../lib/parsers/handlebars').handlebars;
 var path = require('path');
 
+var jsxgettext = require('../../lib/jsxgettext');
+var handlebars = require('../../lib/parsers/handlebars').handlebars;
+
 exports['test handlebars'] = function (assert, cb) {
-  var inputFilename = path.join(__dirname, 'inputs', 'example.handlebars');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'example.handlebars');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     var result = jsxgettext.generate.apply(jsxgettext, handlebars(
       {'inputs/example.handlebars': source}, {})

@@ -1,19 +1,17 @@
 "use strict";
 
-var
-fs = require('fs'),
-jsxgettext = require('../lib/jsxgettext'),
-path = require('path');
+var fs = require('fs');
+var path = require('path');
+
+var jsxgettext = require('../../lib/jsxgettext');
 
 // Tests parsing files with comments
 
 exports['test comments'] = function (assert, cb) {
   // check that files with leading hash parse
-  var inputFilename = path.join(__dirname, 'inputs', 'test.js');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'test.js');
   fs.readFile(inputFilename, "utf8", function (err, source) {
-    var opts = {},
-        sources = {'inputs/test.js': source},
-        result = jsxgettext.generate(sources, 'inputs/test.js', opts);
+    var result = jsxgettext.generate({'inputs/test.js': source}, {});
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 0, 'result is not empty');
     cb();

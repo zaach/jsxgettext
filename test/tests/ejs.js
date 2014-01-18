@@ -1,13 +1,14 @@
 "use strict";
 
 var fs = require('fs');
-var jsxgettext = require('../lib/jsxgettext');
-var ejs = require('../lib/parsers/ejs').ejs;
 var path = require('path');
+
+var jsxgettext = require('../../lib/jsxgettext');
+var ejs = require('../../lib/parsers/ejs').ejs;
 
 exports['test ejs'] = function (assert, cb) {
   // check that include syntax doesn't break extraction
-  var inputFilename = path.join(__dirname, 'inputs', 'include.ejs');
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'include.ejs');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     var result = jsxgettext.generate.apply(jsxgettext, ejs(
       {'inputs/include.ejs': source}, {})
