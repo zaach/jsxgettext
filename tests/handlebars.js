@@ -2,15 +2,15 @@
 
 var fs = require('fs');
 var jsxgettext = require('../lib/jsxgettext');
+var handlebars = require('../lib/parsers/handlebars').handlebars;
 var path = require('path');
 
 exports['test handlebars'] = function (assert, cb) {
   var inputFilename = path.join(__dirname, 'inputs', 'example.handlebars');
   fs.readFile(inputFilename, "utf8", function (err, source) {
-
-    var opts = {},
-        sources = {'inputs/example.handlebars': source},
-        result = jsxgettext.generateFromHandlebars(sources, 'inputs/example.handlebars', opts);
+    var result = jsxgettext.generate.apply(jsxgettext, handlebars(
+      {'inputs/example.handlebars': source}, {})
+    );
     
     assert.equal(typeof result, 'string', 'result is a string');
     assert.ok(result.length > 1, 'result is not empty');
@@ -21,6 +21,5 @@ exports['test handlebars'] = function (assert, cb) {
     cb();
   });
 };
-
 
 if (module === require.main) require('test').run(exports);
