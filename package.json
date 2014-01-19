@@ -1,8 +1,24 @@
 {
-  "author": "Zach Carter",
+  "author": "Zach Carter <zcarter@mozilla.com> (http://twitter.com/zii)",
+  "contributors": [
+    "Burak Yigit Kaya <me@byk.im> (http://byk.im)",
+    "Kaare A. Larsen <kaare.a.larsen@gmail.com> (http://bottleno.se)",
+    "Austin King <shout@ozten.com> (https://ozten.com)",
+    "Lloyd Hilaiel <lloyd@hilaiel.com> (http://lloyd.io)",
+    "Francois Marier <francois@fmarier.org> (http://fmarier.org)",
+    "Andris Reinman <andris.reinman@gmail.com> (http://www.andrisreinman.com)",
+    "Vlad Filippov <github@vf.io> (http://vf.io)",
+    "Michael Weibel (https://github.com/mweibel)",
+    "Eduardo Vaz de Mello (https://github.com/wirapuru)",
+    "Ryan Kelly <ryan@rfk.id.au> (http://www.rfk.id.au)"
+  ],
   "name": "jsxgettext",
-  "description": "Extract gettext calls from JavaScript and EJS files",
   "version": "0.3.4",
+  "license": "MPL-2.0",
+  "description": "Extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files.",
+  "keywords": ["i18n", "internationalization", "gettext", "xgettext"],
+  "homepage": "https://github.com/zaach/jsxgettext",
+  "bugs": "https://github.com/zaach/jsxgettext/issues",
   "repository": {
     "type": "git",
     "url": "git://github.com/zaach/jsxgettext.git"
@@ -20,10 +36,6 @@
   "devDependencies": {
     "jshint": "~2.4.1",
     "test": "*"
-  },
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
   },
   "scripts": {
     "test": "node ./node_modules/jshint . && node test"
