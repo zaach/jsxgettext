@@ -5,3 +5,7 @@ msgstr ""
 #: inputs/expressions.js:5
 msgid "Confirm email address for Persona 2"
 msgstr ""
+
+#: inputs/expressions.js:6
+msgid "Confirm email address for Persona 3"
+msgstr ""

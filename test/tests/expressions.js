@@ -7,7 +7,6 @@ var jsxgettext = require('../../lib/jsxgettext');
 var utils = require('../utils');
 
 exports['test different expression contexts for gettext'] = function (assert, cb) {
-  // check that files with leading hash parse
   var inputFilename = path.join(__dirname, '..', 'inputs', 'expressions.js');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     var result = jsxgettext.generate({'inputs/expressions.js': source}, {});
