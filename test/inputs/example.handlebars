@@ -4,6 +4,7 @@ Even with a {{ value }} embedded.
 Or if it contains the word gettext or even the _ character.
 You might also use a {{#gettext}}block helper{{/gettext}} like this.
 As long as it is {{#helper}}named properly{{/helper}} of course.
+And {{#helper}}nesting of {{#gettext}}helpers{{/gettext}} should be ok{{/helper}} too.
 {{! comment strings }} are passed through
 {{!-- including long-form {} comments with }} markup in them --}}
 Things that {{dont}} {{ pattern match a gettext call}} are ignored.
