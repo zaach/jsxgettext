@@ -13,10 +13,15 @@
     "Ryan Kelly <ryan@rfk.id.au> (http://www.rfk.id.au)"
   ],
   "name": "jsxgettext",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "license": "MPL-2.0",
   "description": "Extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files.",
-  "keywords": ["i18n", "internationalization", "gettext", "xgettext"],
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "gettext",
+    "xgettext"
+  ],
   "homepage": "https://github.com/zaach/jsxgettext",
   "bugs": "https://github.com/zaach/jsxgettext/issues",
   "repository": {
