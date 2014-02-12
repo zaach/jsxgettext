@@ -33,7 +33,7 @@
   "preferGlobal": true,
   "dependencies": {
     "acorn": "0.4.2",
-    "gettext-parser": "0.1.10",
+    "gettext-parser": "0.2.0",
     "nomnom": "1.5.2",
     "jade": "0.30.0"
   },
