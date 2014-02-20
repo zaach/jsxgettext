@@ -43,3 +43,4 @@ Or from source:
        -k WORD, --keyword WORD    additional keyword to be looked for
        -j, --join-existing        join messages with existing file
        -L NAME, --language NAME   use the specified language (javascript, ejs, jinja, handlebars, jade)
+       -s, --sanity               sanity check during the extraction
