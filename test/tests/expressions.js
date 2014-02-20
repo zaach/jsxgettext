@@ -42,4 +42,30 @@ exports['test concatenated strings (issue #10)'] = function (assert, cb) {
   });
 };
 
+exports['test array joins'] = function (assert, cb) {
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'array_joins.js');
+  var outputFilename = path.join(__dirname, '..', 'outputs', 'array_joins.pot');
+
+  fs.readFile(inputFilename, "utf8", function (err, source) {
+    var result = jsxgettext.generate({'inputs/array_joins.js': source}, {});
+    assert.equal(typeof result, 'string', 'result is a string');
+    assert.ok(result.length > 0, 'result is not empty');
+
+    utils.compareResultWithFile(result, outputFilename, assert, cb);
+  });
+};
+
+exports['test complex array joins'] = function (assert, cb) {
+  var inputFilename = path.join(__dirname, '..', 'inputs', 'complex_array_joins.js');
+  var outputFilename = path.join(__dirname, '..', 'outputs', 'complex_array_joins.pot');
+
+  fs.readFile(inputFilename, "utf8", function (err, source) {
+    var result = jsxgettext.generate({'inputs/complex_array_joins.js': source}, {});
+    assert.equal(typeof result, 'string', 'result is a string');
+    assert.ok(result.length > 0, 'result is not empty');
+
+    utils.compareResultWithFile(result, outputFilename, assert, cb);
+  });
+};
+
 if (module === require.main) require('test').run(exports);
