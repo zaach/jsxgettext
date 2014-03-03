@@ -11,7 +11,7 @@ exports['test parsing'] = function (assert, cb) {
   var inputFilename = path.join(__dirname, '..', 'inputs', 'second_attribute.jade');
   fs.readFile(inputFilename, "utf8", function (err, source) {
 
-    var opts = {keyword: '_'},
+    var opts = {keyword: ['gettext', '_']},
         sources = {'inputs/second_attribute.jade': source},
         result = jsxgettext.generate.apply(jsxgettext, jade(sources, opts));
 
@@ -31,7 +31,7 @@ exports['test regexp escaping'] = function (assert, cb) {
   var inputFilename = path.join(__dirname, '..', 'inputs', 'second_attribute.jade');
   fs.readFile(inputFilename, "utf8", function (err, source) {
     // if keyword is not escaped, this will throw an exception
-    var opts = {keyword: 'foo)bar'},
+    var opts = {keyword: ['foo)bar']},
         sources = {'inputs/second_attribute.jade': source};
 
     jsxgettext.generate.apply(jsxgettext, jade(sources, opts));
