@@ -1,6 +1,6 @@
 # jsxgettext [![Build Status](https://travis-ci.org/zaach/jsxgettext.png)](https://travis-ci.org/zaach/jsxgettext) [![NPM version](https://badge.fury.io/js/jsxgettext.png)](http://badge.fury.io/js/jsxgettext)
 
-A node module with a CLI that extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files. Uses a real parser, [acorn](https://github.com/marijnh/acorn), for JavaScript files and recognizes the following uses:
+A node module with a CLI that extracts gettext strings from JavaScript, EJS, Jade, Jinja, Swig and Handlebars files. Uses a real parser, [acorn](https://github.com/marijnh/acorn), for JavaScript files and recognizes the following uses:
 
 ```javascript
 gettext("Hello world!");
@@ -19,7 +19,7 @@ gettext("Hello world!");
 ## Install
 
     npm install jsxgettext
-    
+
 Or from source:
 
     git clone https://github.com/zaach/jsxgettext.git
@@ -44,3 +44,4 @@ Or from source:
        -j, --join-existing        join messages with existing file
        -L NAME, --language NAME   use the specified language (javascript, ejs, jinja, handlebars, jade)
        -s, --sanity               sanity check during the extraction
+       --swigTags                 if using swig, it is required to specify a file which sets up the custom tags on swig
