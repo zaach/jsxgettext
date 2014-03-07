@@ -44,4 +44,26 @@ Or from source:
        -j, --join-existing        join messages with existing file
        -L NAME, --language NAME   use the specified language (javascript, ejs, jinja, handlebars, jade)
        -s, --sanity               sanity check during the extraction
-       --swigTags                 if using swig, it is required to specify a file which sets up the custom tags on swig
+       --support-module           Support module to require for specific language parsers
+
+### support-module
+In order to be able to parse the templates, some language parsers need a custom
+module to be imported which add tags to the parser instance.
+
+#### Swig
+For swig the support-module parameter is **required**. The module should have a function in
+`module.exports` which allows the `swig` instance to be supplied.
+
+##### Example:
+
+```
+// support module
+var trans = require('./trans')
+  , blocktrans = require('./blocktrans');
+
+module.exports = function(swig) {
+  swig.setTag("trans", trans.parse, trans.compile, trans.ends, trans.blockLevel);
+  swig.setTag("blocktrans", blocktrans.parse, blocktrans.compile
+              , blocktrans.ends, blocktrans.blockLevel);
+};
+```

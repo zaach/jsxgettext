@@ -35,7 +35,8 @@
     "acorn": "0.4.2",
     "gettext-parser": "0.2.0",
     "nomnom": "1.5.2",
-    "jade": "0.30.0"
+    "jade": "0.30.0",
+    "swig": "^1.3.2"
   },
   "devDependencies": {
     "jshint": "~2.4.1",
