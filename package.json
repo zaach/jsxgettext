@@ -40,7 +40,9 @@
   },
   "devDependencies": {
     "jshint": "~2.4.1",
-    "test": "*"
+    "test": "*",
+    "i18n-abide": "0.0.17",
+    "swig-i18n-abide": "^0.1.0"
   },
   "scripts": {
     "test": "node ./node_modules/jshint . && node test"
