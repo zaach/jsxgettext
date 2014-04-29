@@ -32,7 +32,7 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "0.4.2",
+    "acorn": "~0.5.0",
     "gettext-parser": "0.2.0",
     "nomnom": "1.5.2",
     "jade": "0.30.0",
