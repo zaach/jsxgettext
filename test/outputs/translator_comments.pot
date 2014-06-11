@@ -1,0 +1,10 @@
+# I am a translator comment
+# I am a comment on the same line
+#: inputs/translator_comments.js:3
+msgid "Hello World"
+msgstr ""
+
+# I belong to dup
+#: inputs/translator_comments.js:5
+msgid "Hello translators"
+msgstr ""
