@@ -7,8 +7,8 @@ exports['test po custom headers'] = function (assert, cb) {
   var opts = {
     "po-headers": {
         "project-id-version": "MyProject 1.0",
-        "language-team": "MyTeam <team@my.org>",
-        "language": "en_US",
+        "report-msgid-bugs-to": "bugs@project.org",
+        "language-team": "this cannot be overridden"
       }
     },
     sources = {'dummy': ''},
@@ -17,13 +17,14 @@ exports['test po custom headers'] = function (assert, cb) {
 
   var headerCustom = {
     "project-id-version": "MyProject 1.0",
-    "language-team": "MyTeam <team@my.org>",
-    "language": "en_US"
+    "report-msgid-bugs-to": "bugs@project.org"
   };
 
   var headers = parsed.headers;
   var headerKeys = Object.keys(headerCustom);
   var i, header;
+
+  assert.equal(headers['language-team'], "LANGUAGE <LL@li.org>", "According to gettext specs, this should not be overridden.");
   for (i = 0; i < headerKeys.length; i++) {
     header = headerKeys[i];
     assert.equal(headerCustom[header], headers[header], header);
