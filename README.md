@@ -46,6 +46,12 @@ Or from source:
        -s, --sanity               sanity check during the extraction
        --support-module           Support module to require for specific language parsers
 
+       --project-id-version "PACKAGE VERSION"   
+       (po header) This is the project name and version of the generated package/catalog.
+
+       --report-bugs-to EMAIL                   
+       (po header) An email address or URL where you can report bugs in the untranslated strings.
+
 ### support-module
 In order to be able to parse the templates, some language parsers need a custom
 module to be imported which add tags to the parser instance.
