@@ -8,3 +8,9 @@ msgstr ""
 #. I belong to dup
 msgid "Hello translators"
 msgstr ""
+
+#: inputs/extracted_comments.js:7
+#. I'm a standards compliant extracted comment!
+#. I am an inline triple-slash comment
+msgid "Hello everyone"
+msgstr ""
