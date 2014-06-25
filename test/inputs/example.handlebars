@@ -10,4 +10,5 @@ And {{#helper}}nesting of {{#gettext}}helpers{{/gettext}} should be ok{{/helper}
 Things that {{dont}} {{ pattern match a gettext call}} are ignored.
 And spurious { or }} or whatever markup doesn't confuse the parser.
 Escaped quotes are ok, {{gettext 'so let\'s test'}} them.
+Watch {{#helper}}out {{#foo}}{{#gettext}}for "quotes"{{/gettext}}{{/foo}}{{/helper}} too.
 So, do we {{gettext good}}?
