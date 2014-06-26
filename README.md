@@ -9,11 +9,11 @@ myModule.gettext("Hello " + 'world!');
 gettext.call(myObj, "Hello " + 'world!');
 ```
 
-It also extracts comments that begin with "L10n:" when they appear above a `gettext` call:
+It also extracts comments that begin with "L10n:" when they appear above or next to a `gettext` call:
 
 ```javascript
-// L10n: Salutation to the world
-gettext("Hello world!");
+// L10n: Don't forget the exclamation mark
+gettext("Hello world!");  // L10n: Salutation to the world  
 ```
 
 ## Install
@@ -45,6 +45,12 @@ Or from source:
        -L NAME, --language NAME   use the specified language (javascript, ejs, jinja, handlebars, jade)
        -s, --sanity               sanity check during the extraction
        --support-module           Support module to require for specific language parsers
+
+       --project-id-version "PACKAGE VERSION"   
+       (po header) This is the project name and version of the generated package/catalog.
+
+       --report-bugs-to EMAIL                   
+       (po header) An email address or URL where you can report bugs in the untranslated strings.
 
 ### support-module
 In order to be able to parse the templates, some language parsers need a custom

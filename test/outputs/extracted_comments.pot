@@ -1,0 +1,16 @@
+#: inputs/extracted_comments.js:3
+#. I am an extracted comment
+#. I am a comment on the same line
+msgid "Hello World"
+msgstr ""
+
+#: inputs/extracted_comments.js:5
+#. I belong to dup
+msgid "Hello translators"
+msgstr ""
+
+#: inputs/extracted_comments.js:7
+#. I'm a standards compliant extracted comment!
+#. I am an inline triple-slash comment
+msgid "Hello everyone"
+msgstr ""
