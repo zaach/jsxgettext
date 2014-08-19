@@ -16,6 +16,8 @@ It also extracts comments that begin with "L10n:" when they appear above or next
 gettext("Hello world!");  // L10n: Salutation to the world  
 ```
 
+"L10n:" is a default value and you can change it with `-c` option.
+
 ## Install
 
     npm install jsxgettext
@@ -51,6 +53,8 @@ Or from source:
 
        --report-bugs-to EMAIL                   
        (po header) An email address or URL where you can report bugs in the untranslated strings.
+
+       -c TAG, --add-comments TAG               place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
 
 ### support-module
 In order to be able to parse the templates, some language parsers need a custom
