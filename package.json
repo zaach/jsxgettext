@@ -37,7 +37,7 @@
     "nomnom": "1.5.2",
     "jade": "0.30.0",
     "swig": "1.3.2",
-    "regexp-quote": "0.0.0"
+    "escape-string-regexp": "1.0.1"
   },
   "devDependencies": {
     "jshint": "~2.4.1",
