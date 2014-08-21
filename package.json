@@ -13,7 +13,7 @@
     "Ryan Kelly <ryan@rfk.id.au> (http://www.rfk.id.au)"
   ],
   "name": "jsxgettext",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "license": "MPL-2.0",
   "description": "Extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files.",
   "keywords": [
@@ -32,7 +32,7 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "~0.5.0",
+    "acorn": "0.7.0",
     "gettext-parser": "0.2.0",
     "nomnom": "1.5.2",
     "jade": "0.30.0",
