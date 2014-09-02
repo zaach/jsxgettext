@@ -32,29 +32,23 @@ Or from source:
 
     $ jsxgettext
 
-    input argument is required
 
-    Usage: jsxgettext <input>... [options]
-
-    input     input files
-
+    Usage: jsxgettext [options] [file ...]
+  
     Options:
-       -o FILE, --output FILE     write output to specified file
-       -p DIR, --output-dir DIR   output files will be placed in directory DIR
-       -v, --version              print version and exit
-       -k WORD, --keyword WORD    additional keyword to be looked for
-       -j, --join-existing        join messages with existing file
-       -L NAME, --language NAME   use the specified language (javascript, ejs, jinja, handlebars, jade)
-       -s, --sanity               sanity check during the extraction
-       --support-module           Support module to require for specific language parsers
-
-       --project-id-version "PACKAGE VERSION"   
-       (po header) This is the project name and version of the generated package/catalog.
-
-       --report-bugs-to EMAIL                   
-       (po header) An email address or URL where you can report bugs in the untranslated strings.
-
-       -c TAG, --add-comments TAG               place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
+  
+      -h, --help                      output usage information
+      -V, --version                   output the version number
+      -o, --output <file>             write output to specified <file>
+      -p, --output-dir <path>         output files will be placed in directory <path>
+      -k, --keyword [keywords]        additional keywords to be looked for
+      -j, --join-existing             join messages with existing file
+      -L, --language [lang]           use the specified language (javascript, ejs, jinja, handlebars, jade, swig) [javascript]
+      -s, --sanity                    sanity check during the extraction
+      --support-module <path>         Specific parsers (e.g. swig) need a custom module to be imported. Specify it with this argument.
+      --project-id-version [version]  This is the project name and version of the generated package/catalog.
+      --report-bugs-to [bug address]  An email address or URL where you can report bugs in the untranslated strings.
+      -c, --add-comments [tag]        place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
 
 ### support-module
 In order to be able to parse the templates, some language parsers need a custom
