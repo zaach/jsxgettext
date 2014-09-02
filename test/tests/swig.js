@@ -5,7 +5,6 @@ var path = require('path');
 
 var jsxgettext = require('../../lib/jsxgettext');
 var swigParser = require('../../lib/parsers/swig').swig;
-var swig = require('swig');
 
 exports['test single file parsing'] = function (assert, cb) {
   // check that files with leading hash parse

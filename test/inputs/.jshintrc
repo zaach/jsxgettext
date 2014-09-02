@@ -1,0 +1,8 @@
+{
+  "extends": "../.jshintrc",
+
+  "undef": false,
+  "unused": false,
+  "strict": false,
+  "sub": true
+}

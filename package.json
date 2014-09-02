@@ -46,12 +46,12 @@
     "escape-string-regexp": "1.0.1"
   },
   "devDependencies": {
-    "jshint": "~2.4.1",
+    "jshint": "2.5.5",
     "test": "*",
     "i18n-abide": "0.0.17",
     "swig-i18n-abide": "0.2.0"
   },
   "scripts": {
-    "test": "node ./node_modules/jshint . && node test"
+    "test": "node ./node_modules/jshint/bin/jshint . && node test"
   }
 }
