@@ -9,7 +9,7 @@ var utils = require('../utils');
 exports['test --add-comments option'] = function (assert, cb) {
   var inputFilename = path.join(__dirname, '..', 'inputs', 'arbitrary_comments.js');
   fs.readFile(inputFilename, 'utf8', function (err, source) {
-    var options = {"add-comments": "comment:"};
+    var options = {"addComments": "comment:"};
     var result = jsxgettext.generate({'inputs/arbitrary_comments.js': source}, options);
 
     assert.equal(typeof result, 'string', 'Result should be a string');
