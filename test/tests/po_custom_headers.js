@@ -5,9 +5,9 @@ var gettextParser = require('gettext-parser');
 
 exports['test po custom headers'] = function (assert, cb) {
   var opts = {
-      "project-id-version": "MyProject 1.0",
-      "report-bugs-to": "bugs@project.org",
-      "language-team": "this cannot be overridden"
+      "projectIdVersion": "MyProject 1.0",
+      "reportBugsTo": "bugs@project.org",
+      "languageTeam": "this cannot be overridden"
     },
     sources = {'dummy': ''},
     result = jsxgettext.generate(sources, opts),
