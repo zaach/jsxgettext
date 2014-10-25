@@ -39,9 +39,9 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "0.7.0",
+    "acorn": "0.9.0",
     "gettext-parser": "0.2.0",
-    "commander": "2.3.0",
+    "commander": "2.5.0",
     "jade": "0.30.0",
     "escape-string-regexp": "1.0.1"
   },
