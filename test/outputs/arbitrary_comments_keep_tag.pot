@@ -1,0 +1,16 @@
+#: inputs/arbitrary_comments.js:3
+#. comment: I am an extracted comment
+#. comment: I am a comment on the same line
+msgid "Hello World"
+msgstr ""
+
+#: inputs/arbitrary_comments.js:5
+#. comment: I belong to dup
+msgid "Hello translators"
+msgstr ""
+
+#: inputs/arbitrary_comments.js:7
+#. I'm a standards compliant extracted comment!
+#. I am an inline triple-slash comment
+msgid "Hello everyone"
+msgstr ""

@@ -48,3 +48,4 @@ Or from source:
       --project-id-version [version]  This is the project name and version of the generated package/catalog.
       --report-bugs-to [bug address]  An email address or URL where you can report bugs in the untranslated strings.
       -c, --add-comments [tag]        place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
+      -K, --keep-tag                  keep comment TAG name in output file - compatible with GNU gettext
