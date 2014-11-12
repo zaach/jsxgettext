@@ -18,6 +18,7 @@ exports['test single file parsing'] = function (assert, cb) {
     assert.ok(result.length > 1, 'result is not empty');
     assert.ok(result.indexOf('msgid "Hello foobar"') > -1, 'Trans tag found');
     assert.ok(result.indexOf('msgid "Test gettext directly"') > -1, 'Gettext function call found');
+    assert.ok(result.indexOf('msgid "Test with additional params on new line"') > -1, 'Gettext with newline function call found');
     assert.ok(result.indexOf('msgid "Hello <a href=\\"%(url)s\\">%(name)s</a>. Pleasure to meet you."') > -1, 'Blocktrans tag found');
     cb();
   });
