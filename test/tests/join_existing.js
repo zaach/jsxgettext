@@ -20,7 +20,7 @@ var test2 = function (assert, cb) {
       'inputs/second.js': source
     }, {
       output: 'messages.pot',
-      "join-existing": true
+      joinExisting: true
     });
 
     assert.equal(typeof result, 'string', 'Result should be a string');
