@@ -20,7 +20,7 @@ var test2 = function (assert, cb) {
       'inputs/second.js': source
     }, {
       output: 'messages.pot',
-      "join-existing": true
+      joinExisting: true
     });
 
     assert.equal(typeof result, 'string', 'Result should be a string');
@@ -59,6 +59,36 @@ exports['test gettext from first file'] = function (assert, cb) {
       test2(assert, cb);
     });
   });
+};
+
+exports['test joining extracted messages'] = function (assert, cb) {
+  var sources = { 'hello.js': 'gettext("hello");' };
+  var options = { output: 'messages.pot', joinExisting: true };
+  var setup = function() {
+    // note pot has the string "hello", therein lies the rub.
+    var potStr = '';
+    potStr +='msgid ""\nmsgstr ""\n';
+    potStr += '"Content-Type: text/plain; charset=UTF-8\\n"\n\n';
+    potStr += 'msgid "hello"\nmsgstr "hola"\n';
+    fs.writeFileSync('messages.pot', potStr, 'utf8');
+  };
+  var teardown = function() {
+    fs.unlink('messages.pot', cb);
+  };
+  var doesNotThrow = function() {
+    try {
+      jsxgettext.generate(sources, options);
+    } catch (e) {
+      assert.fail(e);
+      return false;
+    }
+    return true;
+  };
+
+  setup();
+  assert.ok(doesNotThrow(), 'ignores missings comments');
+  teardown();
+
 };
 
 if (module === require.main) require('test').run(exports);
