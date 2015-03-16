@@ -3,6 +3,7 @@
   "contributors": [
     "Szigetvári Áron (https://github.com/AronSzigetvari)",
     "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de/)",
+    "Doug Beck <doug@douglasbeck.com> (http://douglasbeck.com/)",
     "Chia-liang Kao <clkao@clkao.org> (http://www.clkao.org/)",
     "Vlad Filippov <github@vf.io> (http://vf.io)",
     "Lloyd Hilaiel <lloyd@hilaiel.com> (http://lloyd.io)",
@@ -20,7 +21,7 @@
     "Marcus (https://github.com/mphasize)"
   ],
   "name": "jsxgettext",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "license": "MPL-2.0",
   "description": "Extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files.",
   "keywords": [
