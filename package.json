@@ -43,7 +43,7 @@
     "acorn": "^0.11.0",
     "gettext-parser": "^1.1.0",
     "commander": "2.5.0",
-    "jade": "0.30.0",
+    "jade": "^1.0.0",
     "escape-string-regexp": "1.0.1"
   },
   "devDependencies": {
