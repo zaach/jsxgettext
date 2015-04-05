@@ -1,6 +1,10 @@
 
 p(title=gettext('foo'))= gettext('bar')
-| #{ gettext('same-lime') } #{ gettext('in text') }
+| #{ gettext('same-line') } #{ gettext('in text') }
 span= gettext('foobar')
 p= _('underscored')
-img(alt=_('underscored'),title=_('underscored'))
+img(alt=_('underscored 1'),title=_('underscored 2'))
+a(
+	data-tip=_("data attribute")
+	title=_("attribute - one per line")
+)= gettext("value  - one per line")
