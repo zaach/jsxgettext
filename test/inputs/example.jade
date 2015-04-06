@@ -1,0 +1,23 @@
+- var value = "v"
+p
+  | Some #{ gettext("translated text") } is matched.
+  | Event if it #{ _("uses underscore") }.
+  | Or #{ _('has several translations') } #{ gettext("in one line") }
+  | But non-translated text is not matched.
+  | Even with a #{value} embedded.
+  | Or if it contains the word gettext or even the _ character.
+
+p= _("because sometimes one need context")
+  span= gettext('and yeah - feel free to use " here')
+  // look out for those quotes
+  span= _("or to use ' here")
+
+//- of course other types of comments are ignored
+// even if the look like gettext('invocation')
+
+p Have fun with #{ _('attributes') }
+  a(
+    data-custom=gettext("because jade generally doesn't care")
+    date-extrea=_('how you format your line')
+    href='/this/is/not/something/you/want/to/translate'
+  )= _('This link better points somewhere!')
