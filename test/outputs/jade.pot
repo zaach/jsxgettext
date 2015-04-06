@@ -14,30 +14,50 @@ msgstr ""
 msgid "in one line"
 msgstr ""
 
-#: inputs/example.jade:10
-msgid "because sometimes one need context"
-msgstr ""
-
 #: inputs/example.jade:11
-msgid "and yeah - feel free to use \" here"
+msgid "pipeless multiline syntax"
 msgstr ""
 
 #: inputs/example.jade:13
-msgid "or to use ' here"
+msgid "this is line 13"
+msgstr ""
+
+#: inputs/example.jade:15
+msgid "because sometimes one need context"
+msgstr ""
+
+#: inputs/example.jade:16
+msgid "and yeah - feel free to use \" here"
 msgstr ""
 
 #: inputs/example.jade:18
-msgid "attributes"
-msgstr ""
-
-#: inputs/example.jade:19
-msgid "because jade generally doesn't care"
-msgstr ""
-
-#: inputs/example.jade:19
-msgid "how you format your line"
+msgid "or to use ' here"
 msgstr ""
 
 #: inputs/example.jade:23
-msgid "This link better points somewhere!"
+msgid "attributes"
+msgstr ""
+
+#: inputs/example.jade:24
+msgid "because jade generally doesn't care"
+msgstr ""
+
+#: inputs/example.jade:24
+msgid "how you format your line"
+msgstr ""
+
+#: inputs/example.jade:28
+msgid "This link is in line 28 and it better points somewhere!"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "or you can"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "put multiple attributes"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "in line one line (30)"
 msgstr ""

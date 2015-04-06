@@ -7,6 +7,11 @@ p
   | Even with a #{value} embedded.
   | Or if it contains the word gettext or even the _ character.
 
+p.
+  Modern #{ _('pipeless multiline syntax') }
+  is absolutely supported
+  and BTW #{ gettext("this is line 13") }
+
 p= _("because sometimes one need context")
   span= gettext('and yeah - feel free to use " here')
   // look out for those quotes
@@ -20,4 +25,6 @@ p Have fun with #{ _('attributes') }
     data-custom=gettext("because jade generally doesn't care")
     date-extrea=_('how you format your line')
     href='/this/is/not/something/you/want/to/translate'
-  )= _('This link better points somewhere!')
+  )= _('This link is in line 28 and it better points somewhere!')
+
+  span(data-custom=gettext("or you can"), data-extra=_('put multiple attributes'))= _('in line one line (30)')
