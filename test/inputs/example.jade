@@ -12,14 +12,14 @@ p.
   is absolutely supported
   and BTW #{ gettext("this is line 13") }
 
+//- L10n: comments for translator would be cool
 p= _("because sometimes one need context")
   span= gettext('and yeah - feel free to use " here')
   // look out for those quotes
   span= _("or to use ' here")
 
-//- of course other types of comments are ignored
-// even if the look like gettext('invocation')
-
+//- other types of comments are ignored
+//- even if the look like L10n: or gettext('invocation')
 p Have fun with #{ _('attributes') }
   a(
     data-custom=gettext("because jade generally doesn't care")

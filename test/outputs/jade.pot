@@ -22,15 +22,16 @@ msgstr ""
 msgid "this is line 13"
 msgstr ""
 
-#: inputs/example.jade:15
+#: inputs/example.jade:16
+#. L10n: comments for translator would be cool
 msgid "because sometimes one need context"
 msgstr ""
 
-#: inputs/example.jade:16
+#: inputs/example.jade:17
 msgid "and yeah - feel free to use \" here"
 msgstr ""
 
-#: inputs/example.jade:18
+#: inputs/example.jade:19
 msgid "or to use ' here"
 msgstr ""
 
