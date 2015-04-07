@@ -1,0 +1,64 @@
+#: inputs/example.jade:3
+msgid "translated text"
+msgstr ""
+
+#: inputs/example.jade:4
+msgid "uses underscore"
+msgstr ""
+
+#: inputs/example.jade:5
+msgid "has several translations"
+msgstr ""
+
+#: inputs/example.jade:5
+msgid "in one line"
+msgstr ""
+
+#: inputs/example.jade:11
+msgid "pipeless multiline syntax"
+msgstr ""
+
+#: inputs/example.jade:13
+msgid "this is line 13"
+msgstr ""
+
+#: inputs/example.jade:16
+#. L10n: comments for translator would be cool
+msgid "because sometimes one need context"
+msgstr ""
+
+#: inputs/example.jade:17
+msgid "and yeah - feel free to use \" here"
+msgstr ""
+
+#: inputs/example.jade:19
+msgid "or to use ' here"
+msgstr ""
+
+#: inputs/example.jade:23
+msgid "attributes"
+msgstr ""
+
+#: inputs/example.jade:24
+msgid "because jade generally doesn't care"
+msgstr ""
+
+#: inputs/example.jade:24
+msgid "how you format your line"
+msgstr ""
+
+#: inputs/example.jade:28
+msgid "This link is in line 28 and it better points somewhere!"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "or you can"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "put multiple attributes"
+msgstr ""
+
+#: inputs/example.jade:30
+msgid "in line one line (30)"
+msgstr ""

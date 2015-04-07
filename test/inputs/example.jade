@@ -1,0 +1,30 @@
+- var value = "v"
+p
+  | Some #{ gettext("translated text") } is matched.
+  | Event if it #{ _("uses underscore") }.
+  | Or #{ _('has several translations') } #{ gettext("in one line") }
+  | But non-translated text is not matched.
+  | Even with a #{value} embedded.
+  | Or if it contains the word gettext or even the _ character.
+
+p.
+  Modern #{ _('pipeless multiline syntax') }
+  is absolutely supported
+  and BTW #{ gettext("this is line 13") }
+
+//- L10n: comments for translator would be cool
+p= _("because sometimes one need context")
+  span= gettext('and yeah - feel free to use " here')
+  // look out for those quotes
+  span= _("or to use ' here")
+
+//- other types of comments are ignored
+//- even if the look like L10n: or gettext('invocation')
+p Have fun with #{ _('attributes') }
+  a(
+    data-custom=gettext("because jade generally doesn't care")
+    date-extrea=_('how you format your line')
+    href='/this/is/not/something/you/want/to/translate'
+  )= _('This link is in line 28 and it better points somewhere!')
+
+  span(data-custom=gettext("or you can"), data-extra=_('put multiple attributes'))= _('in line one line (30)')
