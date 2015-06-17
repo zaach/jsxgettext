@@ -9,3 +9,21 @@ msgstr ""
 #: inputs/expressions.js:6
 msgid "Confirm email address for Persona 3"
 msgstr ""
+
+#: inputs/expressions.js:7
+msgid "Confirm email address for Persona 4"
+msgid_plural "Confirm email address for Persona 4 plural"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inputs/expressions.js:8
+msgid "Confirm email address for Persona 5"
+msgid_plural "Confirm email address for Persona 5 plural"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inputs/expressions.js:9
+msgid "Confirm email address for Persona 6"
+msgid_plural "Confirm email address for Persona 6 plural"
+msgstr[0] ""
+msgstr[1] ""

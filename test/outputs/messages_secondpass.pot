@@ -6,3 +6,10 @@ msgstr ""
 #: inputs/second.js:1
 msgid "This message is used twice."
 msgstr ""
+
+#: inputs/first.js:3
+#: inputs/second.js:2
+msgid "This other message is used twice."
+msgid_plural "This other message is used twice. - plural"
+msgstr[0] ""
+msgstr[1] ""

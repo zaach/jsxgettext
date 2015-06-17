@@ -5,3 +5,15 @@ msgstr ""
 #: inputs/multiple_keywords.js:2
 msgid "should also be translatable"
 msgstr ""
+
+#: inputs/multiple_keywords.js:5
+msgid "should be translatable - singular"
+msgid_plural "should be translatable - plural"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inputs/multiple_keywords.js:6
+msgid "should also be translatable - singular"
+msgid_plural "should also be translatable - plural"
+msgstr[0] ""
+msgstr[1] ""

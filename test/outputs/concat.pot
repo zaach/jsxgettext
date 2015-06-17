@@ -3,3 +3,13 @@ msgid ""
 "The second string is significantly longer and we'd like to concatenate it "
 "in our source code to avoid really wide files."
 msgstr ""
+
+#: inputs/concat.js:7
+msgid ""
+"This is another quite long sentence and we'd like to concatenate it in our "
+"source code to avoid really wide files."
+msgid_plural ""
+"This is the plural version of our quite long sentence that we'd like to "
+"concatenate it in our source code to avoid really wide files."
+msgstr[0] ""
+msgstr[1] ""

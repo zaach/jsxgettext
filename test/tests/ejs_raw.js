@@ -18,6 +18,8 @@ exports['test ejs'] = function (assert, cb) {
     assert.ok(result.length > 1, 'raw result is not empty');
     assert.ok(result.indexOf('this is a raw localizable string') !== -1,
               'raw localizable strings are extracted');
+    assert.ok(result.indexOf('this is a raw localizable plural string') !== -1,
+              'raw localizable plural strings are extracted');
     cb();
   });
 };
