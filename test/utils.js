@@ -4,10 +4,12 @@ var fs = require('fs');
 
 exports.compareResultWithFile = function (result, filePath, assert, cb, msg) {
   // Ignore the header
-  result = result.slice(result.indexOf('\n\n') + 2);
+  result = result.slice(result.indexOf('\n\n') + 2).trimRight();
+
 
   fs.readFile(filePath, function (err, source) {
-    assert.equal(result, source.toString('utf8'), msg || 'Results match.');
+    var sourceContent = source.toString('utf8').trimRight();
+    assert.equal(result, sourceContent, msg || 'Results match.');
     cb();
   });
 };
