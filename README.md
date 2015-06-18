@@ -4,9 +4,13 @@ A node module with a CLI that extracts gettext strings from JavaScript, EJS, Jad
 
 ```javascript
 gettext("Hello world!");
-gettext("Hello" + ' world!');
+gettext("Hello " + 'world!');
 myModule.gettext("Hello " + 'world!');
 gettext.call(myObj, "Hello " + 'world!');
+ngettext("Here's an apple for you", "Here are %s apples for you", 3);
+ngettext("Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
+myModule.ngettext("Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
+ngettext.call(myObj, "Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
 ```
 
 It also extracts comments that begin with "L10n:" when they appear above or next to a `gettext` call:
