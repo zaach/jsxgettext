@@ -1,9 +1,14 @@
-#: inputs/anonymous_functions.js:10
+#: inputs/anonymous_functions.js:11
 msgid "I'm gonna get translated, yay!"
 msgstr ""
 
-#: inputs/anonymous_functions.js:11
+#: inputs/anonymous_functions.js:12
 msgid "I'm also gonna get translated!"
 msgid_plural "I'm the plural form!"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/anonymous_functions.js:13
+msgctxt "context"
+msgid "This needs to be translated"
+msgstr ""

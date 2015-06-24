@@ -27,3 +27,18 @@ msgid "Confirm email address for Persona 6"
 msgid_plural "Confirm email address for Persona 6 plural"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/expressions.js:10
+msgctxt "context"
+msgid "Confirm for person 7 context"
+msgstr ""
+
+#: inputs/expressions.js:11
+msgctxt "context"
+msgid "Confirm for person 8 context"
+msgstr ""
+
+#: inputs/expressions.js:12
+msgctxt "context"
+msgid "Confirm for person 9 context"
+msgstr ""

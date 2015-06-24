@@ -11,6 +11,10 @@ ngettext("Here's an apple for you", "Here are %s apples for you", 3);
 ngettext("Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
 myModule.ngettext("Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
 ngettext.call(myObj, "Here's an apple" + ' for you', "Here are %s apples" + ' for you', 3);
+pgettext("context", "This is world");
+pgettext("context", "This " + "is" +" world");
+myModule.pgettext("context", "This " + "is" +" world");
+pgettext.call(myObj, "context", "This is world");
 ```
 
 It also extracts comments that begin with "L10n:" when they appear above or next to a `gettext` call:

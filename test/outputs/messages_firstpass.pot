@@ -11,3 +11,8 @@ msgid "This other message is used twice."
 msgid_plural "This other message is used twice. - plural"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/first.js:4
+msgctxt "context_dup"
+msgid "This message is used twice in context."
+msgstr ""

@@ -17,3 +17,13 @@ msgid "should also be translatable - singular"
 msgid_plural "should also be translatable - plural"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/multiple_keywords.js:9
+msgctxt "context"
+msgid "should be translatable context"
+msgstr ""
+
+#: inputs/multiple_keywords.js:10
+msgctxt "context"
+msgid "should also be translatable context"
+msgstr ""
