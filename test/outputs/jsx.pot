@@ -1,0 +1,15 @@
+#: inputs/example.jsx:5
+msgid "inside h1"
+msgstr ""
+
+#: inputs/example.jsx:6
+msgid "inside attribute"
+msgstr ""
+
+#: inputs/example.jsx:14
+msgid "inside header"
+msgstr ""
+
+#: inputs/example.jsx:15
+msgid "inside footer attribute"
+msgstr ""
