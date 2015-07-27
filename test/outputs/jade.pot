@@ -62,3 +62,15 @@ msgstr ""
 #: inputs/example.jade:30
 msgid "in line one line (30)"
 msgstr ""
+
+#: inputs/example.jade:32
+msgid "Potato"
+msgid_plural "Potatoes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inputs/example.jade:32
+msgid "Apple"
+msgid_plural "Apples"
+msgstr[0] ""
+msgstr[1] ""
