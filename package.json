@@ -19,7 +19,6 @@
     "Valentin Rouet <v.rouet@gmail.com> (https://github.com/vrouet)",
     "Sergey Slipchenko <faergeek@gmail.com> (https://github.com/faergeek)",
     "Michael Weibel (https://github.com/mweibel)",
-
     "Yasu <mahata777@gmail.com> (https://github.com/mahata)",
     "Marcus (https://github.com/mphasize)"
   ],
@@ -44,10 +43,11 @@
   "preferGlobal": true,
   "dependencies": {
     "acorn": "^0.11.0",
-    "gettext-parser": "^1.1.0",
     "commander": "2.5.0",
+    "escape-string-regexp": "1.0.1",
+    "gettext-parser": "^1.1.0",
     "jade": "^1.11.0",
-    "escape-string-regexp": "1.0.1"
+    "jstransform": "^11.0.3"
   },
   "devDependencies": {
     "jshint": "2.5.5",
