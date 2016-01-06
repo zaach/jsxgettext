@@ -30,3 +30,5 @@ p Have fun with #{ _('attributes') }
   span(data-custom=gettext("or you can"), data-extra=_('put multiple attributes'))= _('in line one line (30)')
 
   a(href="http://some-link-here/" title=n_('Potato', 'Potatoes', 5))=n_('Apple', 'Apples', 1)
+
+  +mixin(_("Parameters in mixins"), _("They will be extracted as well"))
