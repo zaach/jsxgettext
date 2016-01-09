@@ -19,7 +19,6 @@
     "Valentin Rouet <v.rouet@gmail.com> (https://github.com/vrouet)",
     "Sergey Slipchenko <faergeek@gmail.com> (https://github.com/faergeek)",
     "Michael Weibel (https://github.com/mweibel)",
-
     "Yasu <mahata777@gmail.com> (https://github.com/mahata)",
     "Marcus (https://github.com/mphasize)"
   ],
@@ -43,11 +42,11 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "^0.11.0",
-    "gettext-parser": "^1.1.0",
-    "commander": "2.5.0",
-    "jade": "^1.11.0",
-    "escape-string-regexp": "1.0.1"
+    "acorn": "^2.7.0",
+    "commander": "^2.9.0",
+    "escape-string-regexp": "^1.0.4",
+    "gettext-parser": "^1.1.2",
+    "jade": "^1.11.0"
   },
   "devDependencies": {
     "jshint": "2.5.5",
