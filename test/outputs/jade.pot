@@ -74,3 +74,11 @@ msgid "Apple"
 msgid_plural "Apples"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/example.jade:34
+msgid "Parameters in mixins"
+msgstr ""
+
+#: inputs/example.jade:34
+msgid "They will be extracted as well"
+msgstr ""
