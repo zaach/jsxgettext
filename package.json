@@ -18,12 +18,13 @@
     "Andris Reinman <andris.reinman@gmail.com> (http://www.andrisreinman.com)",
     "Valentin Rouet <v.rouet@gmail.com> (https://github.com/vrouet)",
     "Sergey Slipchenko <faergeek@gmail.com> (https://github.com/faergeek)",
+    "Gero Takke <gero@gerotakke.de>",
     "Michael Weibel (https://github.com/mweibel)",
     "Yasu <mahata777@gmail.com> (https://github.com/mahata)",
     "Marcus (https://github.com/mphasize)"
   ],
   "name": "jsxgettext",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "license": "MPL-2.0",
   "description": "Extracts gettext strings from JavaScript, EJS, Jade, Jinja and Handlebars files.",
   "keywords": [
