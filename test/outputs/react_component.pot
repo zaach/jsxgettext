@@ -1,0 +1,15 @@
+#: inputs/react_component.jsx:4
+msgid "attr"
+msgstr ""
+
+#: inputs/react_component.jsx:4
+msgid "spread"
+msgstr ""
+
+#: inputs/react_component.jsx:5
+msgid "child component"
+msgstr ""
+
+#: inputs/react_component.jsx:7
+msgid "nested child component"
+msgstr ""
