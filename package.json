@@ -42,18 +42,21 @@
   "main": "lib/jsxgettext.js",
   "bin": "lib/cli.js",
   "preferGlobal": true,
+  "engineStrict": true,
+    "engines": {
+      "node": ">= 4.0.0"
+  },
   "dependencies": {
     "acorn": "^3.0.0",
     "acorn-jsx": "^3.0.0",
     "commander": "^2.9.0",
     "escape-string-regexp": "^1.0.4",
     "gettext-parser": "^1.1.2",
-    "jade": "^1.11.0",
-    "object-assign": "^4.0.1"
+    "jade": "^1.11.0"
   },
   "devDependencies": {
     "jshint": "2.5.5",
-    "test": "*",
+    "test": "0.6.0",
     "i18n-abide": "0.0.17"
   },
   "scripts": {
