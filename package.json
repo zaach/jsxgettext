@@ -48,7 +48,8 @@
     "commander": "^2.9.0",
     "escape-string-regexp": "^1.0.4",
     "gettext-parser": "^1.1.2",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "object-assign": "^4.0.1"
   },
   "devDependencies": {
     "jshint": "2.5.5",
