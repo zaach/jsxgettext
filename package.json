@@ -43,11 +43,13 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "^2.7.0",
+    "acorn": "^3.0.0",
+    "acorn-jsx": "^3.0.0",
     "commander": "^2.9.0",
     "escape-string-regexp": "^1.0.4",
     "gettext-parser": "^1.1.2",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "object-assign": "^4.0.1"
   },
   "devDependencies": {
     "jshint": "2.5.5",
