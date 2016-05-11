@@ -6,6 +6,10 @@ export default React.createClass({
         <div>
           {gettext('nested child component')}
         </div>
+        <input
+          type="text"
+          placeholder={gettext('component with boolean attribute')}
+          required />
       </div>
     );
   },
