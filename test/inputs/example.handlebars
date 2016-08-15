@@ -12,3 +12,5 @@ And spurious { or }} or whatever markup doesn't confuse the parser.
 Escaped quotes are ok, {{gettext 'so let\'s test'}} them.
 Watch {{#helper}}out {{#foo}}{{#gettext}}for "quotes"{{/gettext}}{{/foo}}{{/helper}} too.
 So, do we {{gettext good}}?
+{{ formatMessage (gettext "{name} took {numPhotos, plural, =0 {no photos} =1 {one photo} other {# photos}}") name=firstname numPhotos=number }}
+{{ formatMessage (gettext "adsasdasdasdasdasdasdasdasdaadsfasdfadsfasdfasdfasdfasdfasdfsdasasdasdasdasdadsdasdasdasd") name=firstname numPhotos=number }}
