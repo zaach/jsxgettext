@@ -13,3 +13,7 @@ msgstr ""
 #: inputs/react_component.jsx:7
 msgid "nested child component"
 msgstr ""
+
+#: inputs/react_component.jsx:11
+msgid "component with boolean attribute"
+msgstr ""
