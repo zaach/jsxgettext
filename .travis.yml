@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-  - 4
-  - 6
-  - 7
+- 4
+- 6
+- 7
+deploy:
+  provider: npm
+  on:
+    tags: true
+  email: ben@byk.im
+  api_key:
+    secure: hkf/Lf5wIxdCDb2AZUFxzfYGmNtqm4pW+4iFKuItU/Ce59PUYvPPxWDQSnaG/0VSfbUXrJUaAkMdqMcHW6KY5RPuMaFytZL03dLphBIdPMWAPksygbitBn36I1JR/qPp9s6Na748Ow72QhLUUd2U4CQAezO2e8PWG7koPOOeryI=
