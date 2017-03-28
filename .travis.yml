@@ -9,4 +9,4 @@ deploy:
     tags: true
   email: ben@byk.im
   api_key:
-    secure: hkf/Lf5wIxdCDb2AZUFxzfYGmNtqm4pW+4iFKuItU/Ce59PUYvPPxWDQSnaG/0VSfbUXrJUaAkMdqMcHW6KY5RPuMaFytZL03dLphBIdPMWAPksygbitBn36I1JR/qPp9s6Na748Ow72QhLUUd2U4CQAezO2e8PWG7koPOOeryI=
+    secure: QDWymqZbfwIqsyjsN4/SvQyyEo230w8a5Ppr7hCWhFoW+Lo/8Y8W5nPc+uZhP1Wx7EJJTkGVSztXVef1QNfZnNFcO3+mYL9UQBuvoHseAZ0Rar8AwtN8/SbhvuflosnIGVyUBE1VTAT8cXPEusZ6AUrFsf+6T/Qj3sGvObVuEvI=
