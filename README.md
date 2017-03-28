@@ -17,7 +17,7 @@ It also extracts comments that begin with "L10n:" when they appear above or next
 
 ```javascript
 // L10n: Don't forget the exclamation mark
-gettext("Hello world!");  // L10n: Salutation to the world  
+gettext("Hello world!");  // L10n: Salutation to the world
 ```
 
 "L10n:" is a default value and you can change it with `-c` option.
@@ -34,21 +34,22 @@ Or from source:
 
 ## Use
 
-    $ jsxgettext
+    $ jsxgettext -h
 
 
-    Usage: jsxgettext [options] [file ...]
-  
+    Usage: cli [options] [file ...]
+
     Options:
-  
-      -h, --help                      output usage information
-      -V, --version                   output the version number
-      -o, --output <file>             write output to specified <file>
-      -p, --output-dir <path>         output files will be placed in directory <path>
-      -k, --keyword [keywords]        additional keywords to be looked for
-      -j, --join-existing             join messages with existing file
-      -L, --language [lang]           use the specified language (javascript, ejs, jinja, handlebars, jade, swig) [javascript]
-      -s, --sanity                    sanity check during the extraction
-      --project-id-version [version]  This is the project name and version of the generated package/catalog.
-      --report-bugs-to [bug address]  An email address or URL where you can report bugs in the untranslated strings.
-      -c, --add-comments [tag]        place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
+
+      -h, --help                         output usage information
+      -V, --version                      output the version number
+      -o, --output <file>                write output to specified <file>
+      -p, --output-dir <path>            output files will be placed in directory <path>
+      -k, --keyword [keywords]           additional keywords to be looked for
+      -j, --join-existing                join messages with existing file
+      -L, --language [lang]              use the specified language (javascript, ejs, jinja, handlebars, jade, swig) [javascript]
+      -s, --sanity                       sanity check during the extraction
+      --project-id-version [version]     This is the project name and version of the generated package/catalog.
+      --report-bugs-to [bug address]     An email address or URL where you can report bugs in the untranslated strings.
+      -c, --add-comments [tag]           place comment blocks starting with TAG and preceding keyword lines in output file (default: "L10n:").
+      --parser-options [parser options]  A json to customize acorn parser.
