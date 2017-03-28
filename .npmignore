@@ -1,0 +1,14 @@
+# https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+
+#tests
+test
+
+#build tools
+.travis.yml
+
+#linters
+.jshintrc
+.jshintignore
+
+#editor settings
+.idea
