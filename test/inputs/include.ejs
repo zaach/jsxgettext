@@ -1,3 +1,8 @@
 <% include this/include/syntax/is/kinda/dumb %>
+<%# gettext("this is a non localizable comment string") %>
 <%= gettext("this is a localizable string") %>
 <%= ngettext("this is a localizable singular string", "this is a localizable plural string", 2) %>
+<%= pgettext("context_1","this is a localizable string in context") %>
+<%= npgettext("context_1", "this is a localizable singular string in context", "this is a localizable plural string in context", 2) %>
+<%= pgettext("context_2","this is a localizable string in context") %>
+<%= npgettext("context_2", "this is a localizable singular string in context", "this is a localizable plural string in context", 2) %>

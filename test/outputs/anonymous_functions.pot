@@ -7,3 +7,27 @@ msgid "I'm also gonna get translated!"
 msgid_plural "I'm the plural form!"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/anonymous_functions.js:12
+msgctxt "context1"
+msgid "I am translated in context!"
+msgstr ""
+
+#: inputs/anonymous_functions.js:13
+msgctxt "context2"
+msgid "I am translated in context!"
+msgstr ""
+
+#: inputs/anonymous_functions.js:14
+msgctxt "context3"
+msgid "I am also translated in context!"
+msgid_plural "I'm the plural form!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inputs/anonymous_functions.js:15
+msgctxt "context4"
+msgid "I am also translated in context!"
+msgid_plural "I'm the plural form!"
+msgstr[0] ""
+msgstr[1] ""

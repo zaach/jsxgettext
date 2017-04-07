@@ -1,2 +1,7 @@
 <%=: gettext("this is a localizable string") | capitalize %>
 <%=: ngettext("this is a localizable singular string", "this is a localizable plural string", 2) | capitalize %>
+<%=: pgettext("context_1","this is a localizable string in context") | capitalize %>
+<%=: npgettext("context_1", "this is a localizable singular string in context", "this is a localizable plural string in context", 2) | capitalize %>
+<%=: pgettext("context_2","this is a localizable string in context") | capitalize %>
+<%=: npgettext("context_2", "this is a localizable singular string in context", "this is a localizable plural string in context", 2) | capitalize %>
+
