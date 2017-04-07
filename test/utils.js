@@ -2,6 +2,11 @@
 
 var fs = require('fs');
 
+var getSingleLineString = function(string){
+  return string.replace(/[\r\n]*/g, "");
+};
+exports.getSingleLineString = getSingleLineString;
+
 var compareResultWithFile = function (result, filePath, assert, cb, msg) {
   // Ignore the header
   result = result.slice(result.indexOf('\n\n') + 2).trimRight();
@@ -15,7 +20,4 @@ var compareResultWithFile = function (result, filePath, assert, cb, msg) {
 };
 exports.compareResultWithFile = compareResultWithFile;
 
-var getSingleLineString = function(string){
-  return string.replace(/[\r\n]*/g, "")
-}
-exports.getSingleLineString = getSingleLineString;
+
