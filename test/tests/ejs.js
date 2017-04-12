@@ -26,6 +26,10 @@ exports['test ejs'] = function (assert, cb) {
     assert.ok(singleLineResult.indexOf('msgctxt "context_1"msgid "this is a localizable singular string in context"msgid_plural "this is a localizable plural string in context"') !== -1, 'localizable plural strings in context 1 are extracted');
     assert.ok(singleLineResult.indexOf('msgctxt "context_2"msgid "this is a localizable string in context"') !== -1, 'localizable string in context 2 are extracted');
     assert.ok(singleLineResult.indexOf('msgctxt "context_1"msgid "this is a localizable singular string in context"msgid_plural "this is a localizable plural string in context"') !== -1, 'localizable plural strings in context 2 are extracted');
+    assert.ok(singleLineResult.indexOf('this is a localizable string in domain') !== -1, 'localizable string in domain are extracted');
+    assert.ok(singleLineResult.indexOf('this is a localizable singular string in domain') !== -1, 'localizable plural strings in domain are extracted');
+    assert.ok(singleLineResult.indexOf('msgctxt "context"msgid "this is a localizable string in domain and context"') !== -1, 'localizable string in domain and context are extracted');
+    assert.ok(singleLineResult.indexOf('msgctxt "context"msgid "this is a localizable singular string in domain and context"') !== -1, 'localizable plural strings in domain and context are extracted');
     cb();
   });
 };
