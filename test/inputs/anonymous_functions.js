@@ -7,7 +7,7 @@ var testObj = {
 };
 
 testObj.somemethod('I shall not pass');
-testObj.pgettext("I'm gonna get translated, yay!");
+testObj.gettext("I'm gonna get translated, yay!");
 testObj.ngettext("I'm also gonna get translated!", "I'm the plural form!", 2);
 testObj.pgettext("context1", "I am translated in context!");
 testObj.pgettext("context2", "I am translated in context!");
