@@ -8,7 +8,7 @@ foobar
 
 {% set foobar = gettext("Test gettext directly") %}
 {% set foobar = gettext("Test with additional params on new line", {
-	'foo': 'bar'
+  'foo': 'bar'
 }) %}
 
 {% blocktrans with name=name url=url %}
