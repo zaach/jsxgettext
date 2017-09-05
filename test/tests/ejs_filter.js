@@ -20,6 +20,8 @@ exports['test ejs'] = function (assert, cb) {
               'localizable strings are extracted');
     assert.ok(result.indexOf('this is a localizable plural string') !== -1,
               'localizable plural strings are extracted');
+    assert.ok(result.indexOf('this is a localizable string with context') !== -1,
+              'localizable strings with context are extracted');
     cb();
   });
 };

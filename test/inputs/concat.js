@@ -13,3 +13,10 @@ ngettext(
     "code to avoid really wide files.",
     3
 );
+
+pgettext(
+    "context",
+    "Key can actually be "+
+    "very long. Even over " +
+    "multiple lines."
+);

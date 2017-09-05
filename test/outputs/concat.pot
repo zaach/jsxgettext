@@ -13,3 +13,8 @@ msgid_plural ""
 "concatenate it in our source code to avoid really wide files."
 msgstr[0] ""
 msgstr[1] ""
+
+#: inputs/concat.js:17
+msgctxt "context"
+msgid "Key can actually be very long. Even over multiple lines."
+msgstr ""
