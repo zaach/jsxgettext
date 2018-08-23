@@ -39,11 +39,11 @@ msgstr ""
 msgid "attributes"
 msgstr ""
 
-#: inputs/example.jade:24
+#: inputs/example.jade:25
 msgid "because jade generally doesn't care"
 msgstr ""
 
-#: inputs/example.jade:24
+#: inputs/example.jade:26
 msgid "how you format your line"
 msgstr ""
 
