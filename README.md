@@ -47,7 +47,7 @@ Or from source:
       -p, --output-dir <path>            output files will be placed in directory <path>
       -k, --keyword [keywords]           additional keywords to be looked for
       -j, --join-existing                join messages with existing file
-      -L, --language [lang]              use the specified language (javascript, ejs, jinja, handlebars, jade, swig) [javascript]
+      -L, --language [lang]              use the specified language (javascript, ejs, jinja, handlebars, pug, swig) [javascript]
       -s, --sanity                       sanity check during the extraction
       --project-id-version [version]     This is the project name and version of the generated package/catalog.
       --report-bugs-to [bug address]     An email address or URL where you can report bugs in the untranslated strings.
