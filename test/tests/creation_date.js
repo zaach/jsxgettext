@@ -8,7 +8,7 @@ exports['test creation date'] = function (assert, cb) {
       sources = {'dummy': ''},
       result = jsxgettext.generate(sources, opts);
 
-  var parsed = gettextParser.po.parse(new Buffer(result));
+  var parsed = gettextParser.po.parse(Buffer.from(result));
   var timestamp = parsed.headers["pot-creation-date"].match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}[+-]\d{4})/)[1];
   assert.ok(timestamp.length > 0, 'Valid timestamp');
   // Timestamp should be at most 2 minutes in the past since it is truncated to minute
