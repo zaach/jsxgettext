@@ -7,7 +7,7 @@ exports['test po header'] = function (assert, cb) {
   var opts = {},
       sources = {'dummy': ''},
       result = jsxgettext.generate(sources, opts),
-      parsed = gettextParser.po.parse(new Buffer(result));
+      parsed = gettextParser.po.parse(Buffer.from(result));
 
   var headerDefaults = {
     "project-id-version": "PACKAGE VERSION",

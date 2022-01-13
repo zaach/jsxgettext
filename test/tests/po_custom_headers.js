@@ -11,7 +11,7 @@ exports['test po custom headers'] = function (assert, cb) {
     },
     sources = {'dummy': ''},
     result = jsxgettext.generate(sources, opts),
-    parsed = gettextParser.po.parse(new Buffer(result));
+    parsed = gettextParser.po.parse(Buffer.from(result));
 
   var headerCustom = {
     "project-id-version": "MyProject 1.0",
